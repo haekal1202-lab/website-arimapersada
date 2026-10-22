@@ -1,166 +1,125 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program Pelatihan - LPKS Arima Persada</title>
+    <title>Program & Info Kerja - LPKS Arima Persada</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .font-serif { font-family: 'Fraunces', serif; }
-    </style>
+    <style>body { font-family: 'Inter', sans-serif; background-color: #F0F2F5; }</style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="flex h-screen overflow-hidden text-gray-800">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-[#D90429] text-white flex items-center justify-center rounded-lg font-serif font-bold text-xl">A</div>
-                <div>
-                    <p class="font-serif font-bold text-lg text-[#0A3155] leading-tight">LPKS ARIMA PERSADA</p>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">PT. Arima Bangkit Persada</p>
+    <!-- SIDEBAR (Sama) -->
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex">
+        <div class="h-16 flex items-center px-6 border-b border-gray-100">
+            <div class="w-8 h-8 bg-[#0A3155] text-white flex items-center justify-center rounded-lg font-bold text-sm mr-3">A</div>
+            <span class="font-bold text-[#0A3155] tracking-tight">Arima Persada</span>
+        </div>
+        <nav class="flex-1 py-4 space-y-1">
+            <a href="index.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition"><i class="fa-solid fa-house w-6"></i> Ringkasan</a>
+            <a href="tentang.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition"><i class="fa-solid fa-building w-6"></i> Profil Lembaga</a>
+            <a href="program.html" class="flex items-center px-6 py-3 bg-blue-50 text-[#0A3155] font-semibold border-r-4 border-[#0A3155]"><i class="fa-solid fa-briefcase w-6"></i> Program & Info</a>
+            <a href="https://wa.me/6282375128230" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-green-600 transition"><i class="fa-brands fa-whatsapp w-6"></i> Hubungi Admin</a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-full overflow-hidden">
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shrink-0">
+            <h1 class="text-xl font-bold text-gray-800">Program & Informasi Peluang Kerja</h1>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
+            
+            <!-- PROGRAM CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Magang -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-100 text-blue-800 text-[10px] font-bold px-3 py-1 rounded-bl-lg">Pemula</div>
+                    <h2 class="text-lg font-bold text-[#0A3155] mb-1 mt-2">Magang Jepang</h2>
+                    <p class="text-xs text-gray-500 mb-4">(Ikusei Shuro / Ginou Jisshu)</p>
+                    <p class="text-xs text-gray-600 mb-4 leading-relaxed">Program kerja 3-5 tahun untuk lulusan SMA/SMK. Fokus pada pelatihan dasar dan pengalaman kerja.</p>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Gaji</span><span class="font-semibold">¥150.000 - ¥200.000</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold">Tidak wajib sertifikat</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pindah Kerja</span><span class="font-semibold text-red-500">Tidak bisa</span></div>
+                        <div class="flex justify-between"><span class="text-gray-500">Bawa Keluarga</span><span class="font-semibold text-red-500">Tidak</span></div>
+                    </div>
                 </div>
-            </a>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
-                <a href="index.html" class="hover:text-[#D90429] transition">Beranda</a>
-                <a href="tentang.html" class="hover:text-[#D90429] transition">Tentang</a>
-                <a href="program.html" class="text-[#D90429]">Program</a>
-                <a href="https://wa.me/6282375128230" class="bg-[#0A3155] text-white px-6 py-2.5 rounded-full hover:bg-blue-900 transition shadow-lg">Hubungi Kami</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- HEADER PAGE -->
-    <header class="bg-[#0A3155] text-white py-16 text-center px-4">
-        <h1 class="font-serif text-4xl font-bold mb-4">Program Pelatihan Utama</h1>
-        <p class="text-gray-300 max-w-2xl mx-auto">Pilih jalur karier yang paling sesuai dengan latar belakang pendidikan dan tujuan Anda.</p>
-    </header>
+                <!-- Tokutei Ginou -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-[#0A3155] relative overflow-hidden ring-1 ring-[#0A3155]">
+                    <div class="absolute top-0 right-0 bg-[#0A3155] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">Populer</div>
+                    <h2 class="text-lg font-bold text-[#0A3155] mb-1 mt-2">Tokutei Ginou</h2>
+                    <p class="text-xs text-gray-500 mb-4">(Specified Skilled Worker)</p>
+                    <p class="text-xs text-gray-600 mb-4 leading-relaxed">Pekerja terampil dengan gaji setara pekerja lokal Jepang. Kontrak 5 tahun (dapat diperpanjang).</p>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Gaji</span><span class="font-semibold">¥180.000 - ¥250.000</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold">JFT A2 / N4</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pindah Kerja</span><span class="font-semibold text-green-600">Bisa (Bidang Sama)</span></div>
+                        <div class="flex justify-between"><span class="text-gray-500">Bawa Keluarga</span><span class="font-semibold text-green-600">Bisa (TG2)</span></div>
+                    </div>
+                </div>
 
-    <!-- KONTEN PROGRAM -->
-    <main class="max-w-6xl mx-auto px-4 py-16 space-y-12">
-        
-        <!-- Program 1 -->
-        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
-            <div class="p-8 md:p-12">
-                <div class="inline-block bg-red-50 text-[#D90429] px-3 py-1 rounded-full text-xs font-bold mb-4">Program Pemula</div>
-                <h2 class="font-serif text-3xl font-bold text-[#0A3155] mb-4">Magang Jepang <br><span class="text-xl text-gray-500 font-sans font-normal">(Ikusei Shuro)</span></h2>
-                <p class="text-gray-600 mb-6">Program penyerapan keterampilan kerja bagi lulusan SMA/SMK dengan fokus pada pembentukan karakter, bahasa dasar, dan pengalaman kerja nyata di Jepang.</p>
-                <ul class="space-y-3 mb-8 text-sm text-gray-700">
-                    <li><i class="fa-solid fa-clock text-[#D90429] w-6"></i> <strong>Durasi:</strong> 3 Bulan Pelatihan Intensif</li>
-                    <li><i class="fa-solid fa-book text-[#D90429] w-6"></i> <strong>Target Bahasa:</strong> JLPT N5 - N4</li>
-                    <li><i class="fa-solid fa-industry text-[#D90429] w-6"></i> <strong>Sektor:</strong> Manufaktur, Konstruksi, Pertanian, dll.</li>
-                </ul>
+                <!-- Gijinkoku -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
+                    <h2 class="text-lg font-bold text-[#0A3155] mb-1 mt-2">Gijinkoku</h2>
+                    <p class="text-xs text-gray-500 mb-4">(Engineer / Specialist)</p>
+                    <p class="text-xs text-gray-600 mb-4 leading-relaxed">Jalur profesional untuk lulusan D3/S1 di bidang teknik, manajemen, atau layanan internasional.</p>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pendidikan</span><span class="font-semibold">D3 / S1</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold">N3 / N2</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Durasi</span><span class="font-semibold">6 - 8 Bulan</span></div>
+                        <div class="flex justify-between"><span class="text-gray-500">Sektor</span><span class="font-semibold">Teknik, IT, Penerjemah</span></div>
+                    </div>
+                </div>
             </div>
-            <div class="h-64 md:h-auto">
-                <img src="Kegiatan-belajar.jpeg" alt="Kelas Magang" class="w-full h-full object-cover">
-            </div>
-        </div>
 
-        <!-- Program 2 -->
-        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
-            <div class="h-64 md:h-auto order-last md:order-first">
-                <img src="Foto-latihan-fisik.jpeg" alt="Pelatihan Fisik" class="w-full h-full object-cover">
-            </div>
-            <div class="p-8 md:p-12">
-                <div class="inline-block bg-blue-50 text-[#0A3155] px-3 py-1 rounded-full text-xs font-bold mb-4">Paling Populer</div>
-                <h2 class="font-serif text-3xl font-bold text-[#0A3155] mb-4">Tokutei Ginou <br><span class="text-xl text-gray-500 font-sans font-normal">(Specified Skilled Worker)</span></h2>
-                <p class="text-gray-600 mb-6">Program pekerja berkeahlian spesifik dengan hak gaji setara pekerja lokal Jepang dan fasilitas kontrak jangka panjang.</p>
-                <ul class="space-y-3 mb-8 text-sm text-gray-700">
-                    <li><i class="fa-solid fa-clock text-[#D90429] w-6"></i> <strong>Durasi:</strong> 3 Bulan Pelatihan + Skill Test</li>
-                    <li><i class="fa-solid fa-certificate text-[#D90429] w-6"></i> <strong>Syarat:</strong> JFT-Basic / JLPT N4 + Sertifikat Bidang</li>
-                    <li><i class="fa-solid fa-user-nurse text-[#D90429] w-6"></i> <strong>Sektor:</strong> Kaigo (Perawat), Food Service, Perhotelan, dll.</li>
-                </ul>
-            </div>
-        </div>
+            <!-- INFO PENTING -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-[#0A3155]"></i> Aturan & Hak Pekerja di Jepang</h3>
+                    <ul class="text-xs text-gray-600 space-y-2 list-disc pl-4">
+                        <li><strong>Asuransi Kesehatan:</strong> Pekerja asing wajib terdaftar. Anda hanya membayar 30% dari biaya pengobatan, sisanya ditanggung asuransi [reference:0].</li>
+                        <li><strong>Pajak:</strong> Pajak penghasilan dan pajak penduduk akan dipotong otomatis dari gaji bulanan Anda [reference:1].</li>
+                        <li><strong>Cuti Berbayar:</strong> Setelah 6 bulan bekerja, Anda berhak atas cuti tahunan berbayar (minimal 10 hari) [reference:2].</li>
+                        <li><strong>Hak Pindah Kerja (Ikusei Shuro):</strong> Mulai 2027, pekerja dapat pindah perusahaan jika haknya dilanggar (gaji tidak dibayar, kekerasan) [reference:3].</li>
+                    </ul>
+                </div>
 
-        <!-- Program 3 -->
-        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
-            <div class="p-8 md:p-12">
-                <div class="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold mb-4">Profesional</div>
-                <h2 class="font-serif text-3xl font-bold text-[#0A3155] mb-4">Gijinkoku <br><span class="text-xl text-gray-500 font-sans font-normal">(Engineer / Specialist)</span></h2>
-                <p class="text-gray-600 mb-6">Jalur profesional bagi lulusan D3/S1 untuk bekerja di posisi teknis, manajemen, dan layanan internasional di Jepang.</p>
-                <ul class="space-y-3 mb-8 text-sm text-gray-700">
-                    <li><i class="fa-solid fa-clock text-[#D90429] w-6"></i> <strong>Durasi:</strong> 6 - 8 Bulan</li>
-                    <li><i class="fa-solid fa-graduation-cap text-[#D90429] w-6"></i> <strong>Pendidikan:</strong> Minimal D3 / S1</li>
-                    <li><i class="fa-solid fa-language text-[#D90429] w-6"></i> <strong>Target Bahasa:</strong> JLPT N3 / N2</li>
-                </ul>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fa-solid fa-users text-[#D90429]"></i> Budaya Kerja (Wajib Tahu)</h3>
+                    <ul class="text-xs text-gray-600 space-y-3">
+                        <li>
+                            <strong class="text-gray-800">5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke):</strong> Prinsip kerapian dan kedisiplinan di tempat kerja yang sangat dijunjung tinggi.
+                        </li>
+                        <li>
+                            <strong class="text-gray-800">Horenso (Houkoku, Renraku, Soudan):</strong> Budaya melapor, menghubungi, dan berkonsultasi dengan atasan setiap ada perkembangan atau masalah pekerjaan.
+                        </li>
+                        <li>
+                            <strong class="text-gray-800">Ketepatan Waktu:</strong> Datang 5-10 menit lebih awal adalah hal yang sangat dihargai.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="h-64 md:h-auto">
-                <img src="keberangkatan-siswa.jpeg" alt="Keberangkatan" class="w-full h-full object-cover">
+
+            <!-- ALUR -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-gray-800 mb-4">Alur Pelatihan Hingga Keberangkatan</h3>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs">
+                    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold">1</span> Pendaftaran & MCU</div>
+                    <i class="fa-solid fa-arrow-right text-gray-300 hidden md:block"></i>
+                    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold">2</span> Pelatihan Intensif</div>
+                    <i class="fa-solid fa-arrow-right text-gray-300 hidden md:block"></i>
+                    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold">3</span> Ujian Sertifikasi</div>
+                    <i class="fa-solid fa-arrow-right text-gray-300 hidden md:block"></i>
+                    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold">4</span> Matching & Visa</div>
+                    <i class="fa-solid fa-arrow-right text-gray-300 hidden md:block"></i>
+                    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold">5</span> Berangkat!</div>
+                </div>
             </div>
         </div>
     </main>
-
-    <!-- ALUR PENDAFTARAN -->
-    <section class="bg-white py-16 border-t border-gray-100">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="font-serif text-3xl font-bold text-[#0A3155] text-center mb-12">Alur Pelatihan Hingga Keberangkatan</h2>
-            <div class="space-y-6">
-                <!-- Step -->
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold shrink-0">1</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-[#0A3155]">Pendaftaran & MCU</h3>
-                        <p class="text-gray-600 text-sm mt-1">Tes seleksi masuk, pemeriksaan kesehatan (Medical Check Up), dan pengenalan program.</p>
-                    </div>
-                </div>
-                <!-- Step -->
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold shrink-0">2</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-[#0A3155]">Pelatihan Intensif & Asrama</h3>
-                        <p class="text-gray-600 text-sm mt-1">Pendidikan Bahasa Jepang, Bintalsik, Etika Kerja, dan Pembentukan Karakter di LPKS Arima Persada.</p>
-                    </div>
-                </div>
-                <!-- Step -->
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold shrink-0">3</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-[#0A3155]">Ujian Sertifikasi Resmi</h3>
-                        <p class="text-gray-600 text-sm mt-1">Mengikuti ujian bahasa (JFT-Basic/JLPT N4) dan Ujian Keahlian Keterampilan (SSW Skill Test).</p>
-                    </div>
-                </div>
-                <!-- Step -->
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold shrink-0">4</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-[#0A3155]">Wawancara User (Matching SO)</h3>
-                        <p class="text-gray-600 text-sm mt-1">Proses wawancara langsung dengan perusahaan/pemberi kerja Jepang melalui jaringan LPK SO mitra.</p>
-                    </div>
-                </div>
-                <!-- Step -->
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold shrink-0">5</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-[#0A3155]">Pemberkasan Visa & COE</h3>
-                        <p class="text-gray-600 text-sm mt-1">Pemprosesan Dokumen Certificate of Eligibility (COE) dan Pengurusan Visa Kerja.</p>
-                    </div>
-                </div>
-                 <!-- Step -->
-                 <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold shrink-0">6</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-[#0A3155]">Pemberangkatan & Orientasi Jepang</h3>
-                        <p class="text-gray-600 text-sm mt-1">Pembekalan akhir pra-keberangkatan dan penerbangan menuju lokasi kerja di Jepang.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#0A3155] text-white/70 py-12 border-t border-white/10">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-[#D90429] text-white flex items-center justify-center rounded font-serif font-bold">A</div>
-                <span class="text-white font-bold font-serif tracking-wide">LPKS ARIMA PERSADA</span>
-            </div>
-            <p>&copy; 2026 PT. Arima Bangkit Persada. All Rights Reserved.</p>
-        </div>
-    </footer>
-
 </body>
 </html>
