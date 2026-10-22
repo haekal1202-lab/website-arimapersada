@@ -1,46 +1,93 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPKS Arima Persada - Beranda</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Fraunces', serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- NAVBAR (Copy ke semua halaman) -->
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- NAVBAR -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="font-bold text-xl text-[#0A3155]">LPKS Arima Persada</a>
-            <div class="hidden md:flex space-x-6 text-sm font-semibold">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#D90429] text-white flex items-center justify-center rounded-lg font-serif font-bold text-xl">A</div>
+                <div>
+                    <p class="font-serif font-bold text-lg text-[#0A3155] leading-tight">LPKS ARIMA PERSADA</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">PT. Arima Bangkit Persada</p>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
                 <a href="index.html" class="text-[#D90429]">Beranda</a>
-                <a href="tentang.html" class="hover:text-[#D90429]">Tentang</a>
-                <a href="program.html" class="hover:text-[#D90429]">Program</a>
-                <a href="https://wa.me/6282375128230" class="bg-[#D90429] text-white px-4 py-2 rounded-md hover:bg-red-700">Hubungi Kami</a>
+                <a href="tentang.html" class="hover:text-[#D90429] transition">Tentang</a>
+                <a href="program.html" class="hover:text-[#D90429] transition">Program</a>
+                <a href="https://wa.me/6282375128230" class="bg-[#0A3155] text-white px-6 py-2.5 rounded-full hover:bg-blue-900 transition shadow-lg">Hubungi Kami</a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-            <h1 class="text-4xl md:text-5xl font-bold text-[#0A3155] leading-tight mb-6">Menjembatani Kompetensi, Membuka Gerbang Karier ke Jepang</h1>
-            <p class="text-gray-600 mb-8 text-lg">Lembaga Pelatihan Kerja Swasta (LPKS) terpercaya untuk persiapan Magang Jepang (Ikusei Shuro), Tokutei Ginou (SSW), dan Gijinkoku.</p>
-            <div class="flex gap-4">
-                <a href="program.html" class="bg-[#0A3155] text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-900 transition">Lihat Program</a>
-                <a href="tentang.html" class="border-2 border-[#0A3155] text-[#0A3155] px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Tentang Kami</a>
+    <header class="relative bg-[#0A3155] text-white py-24 px-4 overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D90429] opacity-20 blur-[120px] rounded-full"></div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Terdaftar Kemnaker RI</span>
+                <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6">Menjembatani Kompetensi, <br><span class="text-[#D4B678] italic">Membuka Gerbang</span> Karier.</h1>
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed">Lembaga pelatihan kerja swasta terpercaya untuk persiapan Magang Jepang (Ikusei Shuro), Tokutei Ginou, dan Gijinkoku.</p>
+                <div class="flex gap-4">
+                    <a href="program.html" class="bg-[#D90429] hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg">Lihat Program</a>
+                    <a href="tentang.html" class="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition">Profil Lembaga</a>
+                </div>
             </div>
-        </div>
-        <div>
-            <!-- Ganti dengan foto asli -->
-            <img src="foto-bersama.jpg" alt="Siswa Arima Persada" class="rounded-xl shadow-lg">
+            <div class="relative">
+                <!-- Ganti foto dengan foto bersama siswa -->
+                <img src="foto bersama siswa hitam 2.jpeg" alt="Siswa Arima Persada" class="rounded-3xl shadow-2xl border border-white/10">
+            </div>
         </div>
     </header>
 
+    <!-- TRUST BAR -->
+    <div class="bg-gray-100 py-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-6 text-sm font-bold text-[#0A3155]">
+            <span><i class="fa-solid fa-certificate text-[#D90429] mr-2"></i> Kemnaker RI</span>
+            <span><i class="fa-solid fa-plane text-[#D90429] mr-2"></i> OTIT / Japan MOJ</span>
+            <span><i class="fa-solid fa-handshake text-[#D90429] mr-2"></i> SO Resmi</span>
+            <span><i class="fa-solid fa-book text-[#D90429] mr-2"></i> JLPT & JFT-Basic</span>
+        </div>
+    </div>
+
+    <!-- SAMBUTAN SINGKAT -->
+    <section class="py-20 px-4 max-w-4xl mx-auto text-center">
+        <i class="fa-solid fa-quote-left text-4xl text-gray-300 mb-6"></i>
+        <p class="text-xl md:text-2xl font-serif text-[#0A3155] italic leading-relaxed mb-6">
+            "LPKS Arima Persada hadir sebagai mitra terpercaya untuk mendidik, melatih, dan membentuk karakter calon tenaga kerja yang mandiri, kompeten, dan siap beradaptasi dengan budaya kerja Jepang."
+        </p>
+        <div class="flex items-center justify-center gap-3">
+            <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+            <div class="text-left">
+                <p class="font-bold text-[#0A3155]">Suwardi, S.T</p>
+                <p class="text-xs text-gray-500">Direktur LPKS Arima Persada</p>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer class="bg-[#0A3155] text-white py-8 mt-20 text-center">
-        <p>&copy; 2026 PT. Arima Bangkit Persada. All Rights Reserved.</p>
+    <footer class="bg-[#0A3155] text-white/70 py-12 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-[#D90429] text-white flex items-center justify-center rounded font-serif font-bold">A</div>
+                <span class="text-white font-bold font-serif tracking-wide">LPKS ARIMA PERSADA</span>
+            </div>
+            <p>&copy; 2026 PT. Arima Bangkit Persada. All Rights Reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
