@@ -1,93 +1,145 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPKS Arima Persada - Beranda</title>
+    <title>LPKS Arima Persada - Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .font-serif { font-family: 'Fraunces', serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #F0F2F5; } /* Warna background Meta */
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="flex h-screen overflow-hidden text-gray-800">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-[#D90429] text-white flex items-center justify-center rounded-lg font-serif font-bold text-xl">A</div>
-                <div>
-                    <p class="font-serif font-bold text-lg text-[#0A3155] leading-tight">LPKS ARIMA PERSADA</p>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">PT. Arima Bangkit Persada</p>
-                </div>
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex">
+        <div class="h-16 flex items-center px-6 border-b border-gray-100">
+            <div class="w-8 h-8 bg-[#0A3155] text-white flex items-center justify-center rounded-lg font-bold text-sm mr-3">A</div>
+            <span class="font-bold text-[#0A3155] tracking-tight">Arima Persada</span>
+        </div>
+        <nav class="flex-1 py-4 space-y-1">
+            <a href="index.html" class="flex items-center px-6 py-3 bg-blue-50 text-[#0A3155] font-semibold border-r-4 border-[#0A3155]">
+                <i class="fa-solid fa-house w-6"></i> Ringkasan
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
-                <a href="index.html" class="text-[#D90429]">Beranda</a>
-                <a href="tentang.html" class="hover:text-[#D90429] transition">Tentang</a>
-                <a href="program.html" class="hover:text-[#D90429] transition">Program</a>
-                <a href="https://wa.me/6282375128230" class="bg-[#0A3155] text-white px-6 py-2.5 rounded-full hover:bg-blue-900 transition shadow-lg">Hubungi Kami</a>
+            <a href="tentang.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition">
+                <i class="fa-solid fa-building w-6"></i> Profil Lembaga
+            </a>
+            <a href="program.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition">
+                <i class="fa-solid fa-briefcase w-6"></i> Program & Info
+            </a>
+            <a href="https://wa.me/6282375128230" target="_blank" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-green-600 transition">
+                <i class="fa-brands fa-whatsapp w-6"></i> Hubungi Admin
+            </a>
+        </nav>
+        <div class="p-4 border-t border-gray-100">
+            <div class="bg-gray-50 p-3 rounded-lg text-xs text-gray-500 text-center">
+                <i class="fa-solid fa-shield-halved text-[#0A3155] mb-1 block"></i> Terdaftar Kemnaker RI
             </div>
         </div>
-    </nav>
+    </aside>
 
-    <!-- HERO SECTION -->
-    <header class="relative bg-[#0A3155] text-white py-24 px-4 overflow-hidden">
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D90429] opacity-20 blur-[120px] rounded-full"></div>
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-                <span class="bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Terdaftar Kemnaker RI</span>
-                <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6">Menjembatani Kompetensi, <br><span class="text-[#D4B678] italic">Membuka Gerbang</span> Karier.</h1>
-                <p class="text-gray-300 text-lg mb-8 leading-relaxed">Lembaga pelatihan kerja swasta terpercaya untuk persiapan Magang Jepang (Ikusei Shuro), Tokutei Ginou, dan Gijinkoku.</p>
-                <div class="flex gap-4">
-                    <a href="program.html" class="bg-[#D90429] hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg">Lihat Program</a>
-                    <a href="tentang.html" class="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition">Profil Lembaga</a>
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden">
+        
+        <!-- TOP BAR -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shrink-0">
+            <h1 class="text-xl font-bold text-gray-800">Ringkasan Dasbor</h1>
+            <div class="flex items-center gap-4 text-sm">
+                <span class="hidden md:inline text-gray-500">Selamat datang di Portal LPKS</span>
+                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+            </div>
+        </header>
+
+        <!-- SCROLLABLE CONTENT -->
+        <div class="flex-1 overflow-y-auto p-4 md:p-6">
+            
+            <!-- STATS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Program Tersedia</p>
+                        <p class="text-2xl font-bold text-[#0A3155]">3</p>
+                    </div>
+                    <div class="w-10 h-10 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center"><i class="fa-solid fa-layer-group"></i></div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Mitra SO Resmi</p>
+                        <p class="text-2xl font-bold text-[#0A3155]">Aktif</p>
+                    </div>
+                    <div class="w-10 h-10 bg-green-50 text-green-500 rounded-full flex items-center justify-center"><i class="fa-solid fa-handshake"></i></div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Fasilitas Asrama</p>
+                        <p class="text-2xl font-bold text-[#0A3155]">Tersedia</p>
+                    </div>
+                    <div class="w-10 h-10 bg-orange-50 text-orange-500 rounded-full flex items-center justify-center"><i class="fa-solid fa-house-chimney-window"></i></div>
                 </div>
             </div>
-            <div class="relative">
-                <!-- Ganti foto dengan foto bersama siswa -->
-                <img src="foto bersama siswa hitam 2.jpeg" alt="Siswa Arima Persada" class="rounded-3xl shadow-2xl border border-white/10">
+
+            <!-- MAIN SECTION -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left Column -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div class="p-5 border-b border-gray-100 flex justify-between items-center">
+                            <h2 class="font-bold text-gray-800">Sekilas LPKS Arima Persada</h2>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                LPKS Arima Persada adalah lembaga pelatihan kerja swasta yang mengkhususkan diri pada persiapan intensif calon tenaga kerja menuju Jepang. Kami berfokus pada pembentukan karakter disiplin, penguasaan bahasa Jepang, serta pemahaman mendalam tentang etos kerja Jepang.
+                            </p>
+                            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-100">
+                                <img src="Logo polos.jpeg" alt="Logo" class="w-10 h-10 object-contain bg-white rounded p-1">
+                                <div>
+                                    <p class="text-sm font-bold text-[#0A3155]">PT. Arima Bangkit Persada</p>
+                                    <p class="text-xs text-gray-500">Terdaftar Kemnaker RI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="p-5 border-b border-gray-100">
+                            <h2 class="font-bold text-gray-800">Akses Cepat</h2>
+                        </div>
+                        <div class="p-5 grid grid-cols-2 gap-3">
+                            <a href="tentang.html" class="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:border-[#0A3155] hover:bg-blue-50 transition text-center">
+                                <i class="fa-solid fa-file-contract text-2xl text-[#0A3155] mb-2"></i>
+                                <span class="text-sm font-semibold">Legalitas & Visi Misi</span>
+                            </a>
+                            <a href="program.html" class="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:border-[#D90429] hover:bg-red-50 transition text-center">
+                                <i class="fa-solid fa-passport text-2xl text-[#D90429] mb-2"></i>
+                                <span class="text-sm font-semibold">Info Kerja Jepang</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="p-5 border-b border-gray-100">
+                            <h2 class="font-bold text-gray-800">Kontak Cepat</h2>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-location-dot text-gray-400 mt-1"></i>
+                                <p class="text-sm text-gray-600">Jl. Negararatu, Desa Negara Ratu, Kec. Natar, Lampung Selatan</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-brands fa-whatsapp text-green-500 mt-1"></i>
+                                <p class="text-sm text-gray-600">+62 823-7512-8230</p>
+                            </div>
+                            <a href="https://wa.me/6282375128230" class="block w-full text-center bg-[#25D366] text-white font-semibold py-2 rounded-lg hover:bg-green-600 transition text-sm mt-2">Chat Admin</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-
-    <!-- TRUST BAR -->
-    <div class="bg-gray-100 py-6 border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-6 text-sm font-bold text-[#0A3155]">
-            <span><i class="fa-solid fa-certificate text-[#D90429] mr-2"></i> Kemnaker RI</span>
-            <span><i class="fa-solid fa-plane text-[#D90429] mr-2"></i> OTIT / Japan MOJ</span>
-            <span><i class="fa-solid fa-handshake text-[#D90429] mr-2"></i> SO Resmi</span>
-            <span><i class="fa-solid fa-book text-[#D90429] mr-2"></i> JLPT & JFT-Basic</span>
-        </div>
-    </div>
-
-    <!-- SAMBUTAN SINGKAT -->
-    <section class="py-20 px-4 max-w-4xl mx-auto text-center">
-        <i class="fa-solid fa-quote-left text-4xl text-gray-300 mb-6"></i>
-        <p class="text-xl md:text-2xl font-serif text-[#0A3155] italic leading-relaxed mb-6">
-            "LPKS Arima Persada hadir sebagai mitra terpercaya untuk mendidik, melatih, dan membentuk karakter calon tenaga kerja yang mandiri, kompeten, dan siap beradaptasi dengan budaya kerja Jepang."
-        </p>
-        <div class="flex items-center justify-center gap-3">
-            <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-            <div class="text-left">
-                <p class="font-bold text-[#0A3155]">Suwardi, S.T</p>
-                <p class="text-xs text-gray-500">Direktur LPKS Arima Persada</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#0A3155] text-white/70 py-12 border-t border-white/10">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-[#D90429] text-white flex items-center justify-center rounded font-serif font-bold">A</div>
-                <span class="text-white font-bold font-serif tracking-wide">LPKS ARIMA PERSADA</span>
-            </div>
-            <p>&copy; 2026 PT. Arima Bangkit Persada. All Rights Reserved.</p>
-        </div>
-    </footer>
-
+    </main>
 </body>
 </html>
