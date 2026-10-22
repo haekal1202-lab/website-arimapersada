@@ -11,13 +11,16 @@
 </head>
 <body class="flex h-screen overflow-hidden text-gray-800">
 
-    <!-- SIDEBAR (Sama) -->
-    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex">
-        <div class="h-16 flex items-center px-6 border-b border-gray-100">
-            <div class="w-8 h-8 bg-[#0A3155] text-white flex items-center justify-center rounded-lg font-bold text-sm mr-3">A</div>
-            <span class="font-bold text-[#0A3155] tracking-tight">Arima Persada</span>
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex shrink-0">
+        <div class="h-16 flex items-center px-4 border-b border-gray-100 gap-3">
+            <img src="Logo polos.jpeg" alt="Logo Arima" class="h-9 w-auto object-contain">
+            <div>
+                <p class="font-bold text-[#0A3155] text-sm leading-tight">LPKS ARIMA</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-wider">Persada</p>
+            </div>
         </div>
-        <nav class="flex-1 py-4 space-y-1">
+        <nav class="flex-1 py-4 space-y-1 overflow-y-auto">
             <a href="index.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition"><i class="fa-solid fa-house w-6"></i> Ringkasan</a>
             <a href="tentang.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition"><i class="fa-solid fa-building w-6"></i> Profil Lembaga</a>
             <a href="program.html" class="flex items-center px-6 py-3 bg-blue-50 text-[#0A3155] font-semibold border-r-4 border-[#0A3155]"><i class="fa-solid fa-briefcase w-6"></i> Program & Info</a>
@@ -25,6 +28,7 @@
         </nav>
     </aside>
 
+    <!-- MAIN CONTENT -->
     <main class="flex-1 flex flex-col h-full overflow-hidden">
         <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shrink-0">
             <h1 class="text-xl font-bold text-gray-800">Program & Informasi Peluang Kerja</h1>
@@ -34,73 +38,78 @@
             
             <!-- PROGRAM CARDS -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Magang -->
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
+                <!-- Magang (Ikusei Shuro) -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden flex flex-col">
                     <div class="absolute top-0 right-0 bg-blue-100 text-blue-800 text-[10px] font-bold px-3 py-1 rounded-bl-lg">Pemula</div>
                     <h2 class="text-lg font-bold text-[#0A3155] mb-1 mt-2">Magang Jepang</h2>
-                    <p class="text-xs text-gray-500 mb-4">(Ikusei Shuro / Ginou Jisshu)</p>
-                    <p class="text-xs text-gray-600 mb-4 leading-relaxed">Program kerja 3-5 tahun untuk lulusan SMA/SMK. Fokus pada pelatihan dasar dan pengalaman kerja.</p>
-                    <div class="space-y-2 text-xs">
-                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Gaji</span><span class="font-semibold">¥150.000 - ¥200.000</span></div>
-                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold">Tidak wajib sertifikat</span></div>
+                    <p class="text-xs text-gray-500 mb-4">(Ikusei Shuro)</p>
+                    <p class="text-xs text-gray-600 mb-4 leading-relaxed flex-grow">Program kerja untuk lulusan SMA/SMK. Fokus pada pelatihan dasar dan pengalaman kerja.</p>
+                    <div class="space-y-2 text-xs mt-auto">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Durasi</span><span class="font-semibold">3 - 5 Tahun</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold text-red-600">Wajib JLPT N5 / JFT A1</span></div>
                         <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pindah Kerja</span><span class="font-semibold text-red-500">Tidak bisa</span></div>
-                        <div class="flex justify-between"><span class="text-gray-500">Bawa Keluarga</span><span class="font-semibold text-red-500">Tidak</span></div>
                     </div>
                 </div>
 
                 <!-- Tokutei Ginou -->
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-[#0A3155] relative overflow-hidden ring-1 ring-[#0A3155]">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-[#0A3155] relative overflow-hidden ring-1 ring-[#0A3155] flex flex-col">
                     <div class="absolute top-0 right-0 bg-[#0A3155] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">Populer</div>
                     <h2 class="text-lg font-bold text-[#0A3155] mb-1 mt-2">Tokutei Ginou</h2>
                     <p class="text-xs text-gray-500 mb-4">(Specified Skilled Worker)</p>
-                    <p class="text-xs text-gray-600 mb-4 leading-relaxed">Pekerja terampil dengan gaji setara pekerja lokal Jepang. Kontrak 5 tahun (dapat diperpanjang).</p>
-                    <div class="space-y-2 text-xs">
+                    <p class="text-xs text-gray-600 mb-4 leading-relaxed flex-grow">Pekerja terampil dengan gaji setara pekerja lokal Jepang.</p>
+                    <div class="space-y-2 text-xs mt-auto">
                         <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Gaji</span><span class="font-semibold">¥180.000 - ¥250.000</span></div>
                         <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold">JFT A2 / N4</span></div>
-                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pindah Kerja</span><span class="font-semibold text-green-600">Bisa (Bidang Sama)</span></div>
-                        <div class="flex justify-between"><span class="text-gray-500">Bawa Keluarga</span><span class="font-semibold text-green-600">Bisa (TG2)</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pindah Kerja</span><span class="font-semibold text-green-600">Bisa</span></div>
                     </div>
                 </div>
 
                 <!-- Gijinkoku -->
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden flex flex-col">
                     <h2 class="text-lg font-bold text-[#0A3155] mb-1 mt-2">Gijinkoku</h2>
                     <p class="text-xs text-gray-500 mb-4">(Engineer / Specialist)</p>
-                    <p class="text-xs text-gray-600 mb-4 leading-relaxed">Jalur profesional untuk lulusan D3/S1 di bidang teknik, manajemen, atau layanan internasional.</p>
-                    <div class="space-y-2 text-xs">
+                    <p class="text-xs text-gray-600 mb-4 leading-relaxed flex-grow">Jalur profesional untuk lulusan D3/S1 di bidang teknik dan manajemen.</p>
+                    <div class="space-y-2 text-xs mt-auto">
                         <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Pendidikan</span><span class="font-semibold">D3 / S1</span></div>
                         <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Bahasa</span><span class="font-semibold">N3 / N2</span></div>
-                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Durasi</span><span class="font-semibold">6 - 8 Bulan</span></div>
-                        <div class="flex justify-between"><span class="text-gray-500">Sektor</span><span class="font-semibold">Teknik, IT, Penerjemah</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span class="text-gray-500">Sektor</span><span class="font-semibold">Teknik, IT, Penerjemah</span></div>
                     </div>
                 </div>
             </div>
 
-            <!-- INFO PENTING -->
+            <!-- INFO PENTING & BUDAYA KERJA -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-[#0A3155]"></i> Aturan & Hak Pekerja di Jepang</h3>
+                    <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-[#0A3155]"></i> Aturan & Hak Pekerja</h3>
                     <ul class="text-xs text-gray-600 space-y-2 list-disc pl-4">
-                        <li><strong>Asuransi Kesehatan:</strong> Pekerja asing wajib terdaftar. Anda hanya membayar 30% dari biaya pengobatan, sisanya ditanggung asuransi [reference:0].</li>
-                        <li><strong>Pajak:</strong> Pajak penghasilan dan pajak penduduk akan dipotong otomatis dari gaji bulanan Anda [reference:1].</li>
-                        <li><strong>Cuti Berbayar:</strong> Setelah 6 bulan bekerja, Anda berhak atas cuti tahunan berbayar (minimal 10 hari) [reference:2].</li>
-                        <li><strong>Hak Pindah Kerja (Ikusei Shuro):</strong> Mulai 2027, pekerja dapat pindah perusahaan jika haknya dilanggar (gaji tidak dibayar, kekerasan) [reference:3].</li>
+                        <li><strong>Asuransi Kesehatan:</strong> Pekerja asing wajib terdaftar. Anda hanya membayar 30% dari biaya pengobatan.</li>
+                        <li><strong>Cuti Berbayar:</strong> Setelah 6 bulan bekerja, Anda berhak atas cuti tahunan berbayar (minimal 10 hari).</li>
+                        <li><strong>Hak Pindah Kerja (Ikusei Shuro):</strong> Mulai 2027, pekerja dapat pindah perusahaan jika haknya dilanggar (gaji tidak dibayar, kekerasan).</li>
                     </ul>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2"><i class="fa-solid fa-users text-[#D90429]"></i> Budaya Kerja (Wajib Tahu)</h3>
                     <ul class="text-xs text-gray-600 space-y-3">
-                        <li>
-                            <strong class="text-gray-800">5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke):</strong> Prinsip kerapian dan kedisiplinan di tempat kerja yang sangat dijunjung tinggi.
-                        </li>
-                        <li>
-                            <strong class="text-gray-800">Horenso (Houkoku, Renraku, Soudan):</strong> Budaya melapor, menghubungi, dan berkonsultasi dengan atasan setiap ada perkembangan atau masalah pekerjaan.
-                        </li>
-                        <li>
-                            <strong class="text-gray-800">Ketepatan Waktu:</strong> Datang 5-10 menit lebih awal adalah hal yang sangat dihargai.
-                        </li>
+                        <li><strong class="text-gray-800">5S:</strong> Prinsip kerapian dan kedisiplinan di tempat kerja yang sangat dijunjung tinggi.</li>
+                        <li><strong class="text-gray-800">Horenso:</strong> Budaya melapor, menghubungi, dan berkonsultasi dengan atasan setiap ada perkembangan.</li>
+                        <li><strong class="text-gray-800">Ketepatan Waktu:</strong> Datang 5-10 menit lebih awal adalah hal yang sangat dihargai.</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- GALERI KEBERANGKATAN -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="p-5 border-b border-gray-100">
+                    <h3 class="font-bold text-gray-800">Momen Keberangkatan Alumni</h3>
+                </div>
+                <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="rounded-lg overflow-hidden group">
+                        <img src="keberangkatan-siswa.jpeg" alt="Keberangkatan" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-lg overflow-hidden group">
+                        <img src="Foto-keberangkatan-siswa-2.jpeg" alt="Keberangkatan 2" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    </div>
                 </div>
             </div>
 
