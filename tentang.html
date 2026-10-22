@@ -11,13 +11,17 @@
 </head>
 <body class="flex h-screen overflow-hidden text-gray-800">
 
-    <!-- SIDEBAR (Sama seperti index) -->
-    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex">
-        <div class="h-16 flex items-center px-6 border-b border-gray-100">
-            <div class="w-8 h-8 bg-[#0A3155] text-white flex items-center justify-center rounded-lg font-bold text-sm mr-3">A</div>
-            <span class="font-bold text-[#0A3155] tracking-tight">Arima Persada</span>
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex shrink-0">
+        <div class="h-16 flex items-center px-4 border-b border-gray-100 gap-3">
+            <!-- LOGO RESMI -->
+            <img src="Logo polos.jpeg" alt="Logo Arima" class="h-9 w-auto object-contain">
+            <div>
+                <p class="font-bold text-[#0A3155] text-sm leading-tight">LPKS ARIMA</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-wider">Persada</p>
+            </div>
         </div>
-        <nav class="flex-1 py-4 space-y-1">
+        <nav class="flex-1 py-4 space-y-1 overflow-y-auto">
             <a href="index.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition"><i class="fa-solid fa-house w-6"></i> Ringkasan</a>
             <a href="tentang.html" class="flex items-center px-6 py-3 bg-blue-50 text-[#0A3155] font-semibold border-r-4 border-[#0A3155]"><i class="fa-solid fa-building w-6"></i> Profil Lembaga</a>
             <a href="program.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#0A3155] transition"><i class="fa-solid fa-briefcase w-6"></i> Program & Info</a>
@@ -25,6 +29,7 @@
         </nav>
     </aside>
 
+    <!-- MAIN CONTENT -->
     <main class="flex-1 flex flex-col h-full overflow-hidden">
         <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shrink-0">
             <h1 class="text-xl font-bold text-gray-800">Profil Lembaga</h1>
@@ -32,6 +37,23 @@
 
         <div class="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
             
+            <!-- SAMBUTAN DIREKTUR -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-gray-50 shrink-0 bg-gray-100 flex items-center justify-center text-gray-400">
+                        <!-- Ganti src dengan foto direktur jika ada -->
+                        <i class="fa-solid fa-user-tie text-5xl"></i>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h2 class="text-xl font-bold text-[#0A3155] mb-1">Sambutan Direktur</h2>
+                        <p class="text-sm font-semibold text-gray-800 mb-4">Suwardi, S.T</p>
+                        <p class="text-sm text-gray-600 leading-relaxed italic">
+                            "Persaingan dunia kerja global menuntut kesiapan mental, keterampilan teknis, dan penguasaan bahasa yang matang. LPKS Arima Persada hadir sebagai mitra terpercaya untuk mendidik, melatih, dan membentuk karakter calon tenaga kerja yang mandiri, kompeten, dan siap beradaptasi dengan budaya kerja Jepang."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <!-- VISI MISI -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -50,38 +72,56 @@
                 </div>
             </div>
 
-            <!-- FASILITAS ASRAMA (DETAIL) -->
+            <!-- FASILITAS ASRAMA (GALERI FOTO) -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                 <div class="p-5 border-b border-gray-100">
                     <h2 class="font-bold text-gray-800">Fasilitas Asrama & Lingkungan Belajar</h2>
                 </div>
-                <div class="p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- Card Fasilitas -->
-                    <div class="border border-gray-100 rounded-lg overflow-hidden">
-                        <img src="foto-asrama.jpeg" alt="Kamar Asrama" class="w-full h-32 object-cover">
+                <div class="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Foto 1 -->
+                    <div class="border border-gray-100 rounded-lg overflow-hidden group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="foto-asrama.jpeg" alt="Kamar Asrama" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
                         <div class="p-3">
                             <p class="font-bold text-sm text-gray-800">Kamar Asrama</p>
-                            <p class="text-xs text-gray-500 mt-1">Kamar tidur yang nyaman dengan fasilitas memadai, memenuhi standar kelayakan ruang.</p>
+                            <p class="text-xs text-gray-500 mt-1">Kamar tidur nyaman dengan fasilitas memadai.</p>
                         </div>
                     </div>
-                    <div class="border border-gray-100 rounded-lg overflow-hidden">
-                        <img src="foto-dapur-asrama-2.jpeg" alt="Dapur & Ruang Makan" class="w-full h-32 object-cover">
+                    <!-- Foto 2 -->
+                    <div class="border border-gray-100 rounded-lg overflow-hidden group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="foto-dapur-asrama-2.jpeg" alt="Dapur & Ruang Makan" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
                         <div class="p-3">
                             <p class="font-bold text-sm text-gray-800">Dapur & Ruang Makan</p>
-                            <p class="text-xs text-gray-500 mt-1">Area memasak bersama yang bersih dan terawat untuk memenuhi kebutuhan konsumsi sehari-hari.</p>
+                            <p class="text-xs text-gray-500 mt-1">Area memasak bersama yang bersih.</p>
                         </div>
                     </div>
-                    <div class="border border-gray-100 rounded-lg overflow-hidden">
-                        <img src="Kegiatan-belajar.jpeg" alt="Ruang Kelas" class="w-full h-32 object-cover">
+                    <!-- Foto 3 -->
+                    <div class="border border-gray-100 rounded-lg overflow-hidden group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="Kegiatan-belajar.jpeg" alt="Ruang Kelas" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
                         <div class="p-3">
                             <p class="font-bold text-sm text-gray-800">Ruang Kelas</p>
-                            <p class="text-xs text-gray-500 mt-1">Ruang belajar kondusif dengan fasilitas pendukung untuk pembelajaran bahasa Jepang interaktif.</p>
+                            <p class="text-xs text-gray-500 mt-1">Belajar bahasa Jepang interaktif.</p>
+                        </div>
+                    </div>
+                     <!-- Foto 4 -->
+                     <div class="border border-gray-100 rounded-lg overflow-hidden group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="Foto-latihan-fisik.jpeg" alt="Latihan Fisik" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-3">
+                            <p class="font-bold text-sm text-gray-800">Area Latihan Fisik</p>
+                            <p class="text-xs text-gray-500 mt-1">Pembentukan fisik dan mental (FMD).</p>
                         </div>
                     </div>
                 </div>
                 <div class="px-5 pb-5">
                     <div class="bg-blue-50 text-[#0A3155] p-4 rounded-lg text-xs leading-relaxed border border-blue-100">
-                        <i class="fa-solid fa-circle-info mr-1"></i> <strong>Catatan:</strong> Lingkungan asrama menerapkan <em>Japanese Zone</em> untuk membiasakan peserta berkomunikasi dalam bahasa Jepang sehari-hari. Fasilitas kamar dirancang untuk memenuhi standar kenyamanan dan privasi.
+                        <i class="fa-solid fa-circle-info mr-1"></i> Lingkungan asrama menerapkan <strong>Japanese Zone</strong> untuk membiasakan peserta berkomunikasi dalam bahasa Jepang sehari-hari.
                     </div>
                 </div>
             </div>
