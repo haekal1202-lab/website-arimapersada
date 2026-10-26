@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kebijakan Privasi — LPKS Arima Persada</title>
+<meta name="description" content="Kebijakan Privasi LPKS Arima Persada — PT Arima Persada. Informasi tentang data pribadi yang dikumpulkan, tujuan penggunaan, dan hak subjek data." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0b1730;--navy-2:#12224a;--ink:#0f172a;--cream:#fbf8f2;
+    --gold:#c9a24a;--gold-soft:#e7ce8f;--line:rgba(15,23,42,.08);--muted:#64748b;
+    --white:#ffffff;--ease:cubic-bezier(.2,.7,.2,1)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);
+    background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.25;font-weight:700}
+  .serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  .nav{background:var(--navy);padding:16px 0;position:sticky;top:0;z-index:100;
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;
+    margin:0 auto;padding:0 24px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1rem;color:var(--white)}
+  .brand-mark{width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,var(--gold) 0%,#b8912f 100%);
+    display:grid;place-items:center;color:var(--navy);
+    font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem}
+  .nav-back{color:rgba(255,255,255,.85);font-size:.88rem;display:flex;align-items:center;gap:8px}
+  .nav-back:hover{color:var(--gold)}
+
+  .policy-header{background:linear-gradient(135deg,#0a1327 0%,#0f1e3d 50%,#12224a 100%);
+    color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden}
+  .policy-header::before{content:"";position:absolute;top:-30%;right:-10%;width:50vw;height:50vw;
+    background:radial-gradient(circle,rgba(201,162,74,.12) 0%,transparent 60%);
+    border-radius:50%;pointer-events:none}
+  .policy-header .wrap{position:relative;z-index:2;max-width:800px}
+  .kicker{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px}
+  .policy-header h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+  .policy-header p{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:8px}
+  .policy-header .meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:24px;
+    padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:.82rem;
+    color:rgba(255,255,255,.6)}
+  .policy-header .meta strong{color:var(--gold-soft);font-weight:600}
+
+  .policy-body{max-width:1200px;margin:0 auto;padding:64px 24px 100px;
+    display:grid;grid-template-columns:240px 1fr;gap:64px;align-items:start}
+
+  .toc{position:sticky;top:100px}
+  .toc h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;
+    color:var(--gold);margin-bottom:16px;font-weight:700}
+  .toc ul{list-style:none;display:flex;flex-direction:column;gap:8px;
+    border-left:2px solid var(--line);padding-left:0}
+  .toc a{display:block;padding:6px 0 6px 16px;font-size:.82rem;color:var(--muted);
+    border-left:2px solid transparent;margin-left:-2px;transition:all .3s}
+  .toc a:hover{color:var(--gold);border-left-color:var(--gold);padding-left:18px;text-decoration:none}
+
+  .policy-content{max-width:760px}
+  .policy-content section{margin-bottom:56px;scroll-margin-top:100px}
+  .policy-content h2{font-size:1.5rem;color:var(--navy);margin-bottom:20px;
+    padding-bottom:12px;border-bottom:2px solid var(--gold);display:inline-block}
+  .policy-content h3{font-size:1.05rem;color:var(--navy);margin-top:24px;margin-bottom:12px}
+  .policy-content p{margin-bottom:14px;color:#334155;font-size:.95rem}
+  .policy-content ul,.policy-content ol{margin-bottom:16px;padding-left:24px}
+  .policy-content li{margin-bottom:8px;color:#334155;font-size:.92rem}
+  .policy-content li strong{color:var(--navy)}
+  .policy-content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.85rem}
+  .policy-content th,.policy-content td{padding:12px 16px;text-align:left;
+    border-bottom:1px solid var(--line)}
+  .policy-content th{background:var(--navy);color:var(--white);font-weight:600;
+    font-size:.78rem;letter-spacing:.03em}
+  .policy-content tr:nth-child(even){background:rgba(0,0,0,.02)}
+  .policy-content a{color:var(--gold);text-decoration:underline}
+  .callout{background:rgba(201,162,74,.08);border-left:4px solid var(--gold);
+    padding:16px 20px;border-radius:0 8px 8px 0;margin:16px 0;font-size:.9rem}
+  .placeholder{color:#b45309;background:#fef3c7;padding:2px 6px;border-radius:4px;
+    font-size:.85em;font-weight:600;display:inline-block}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 0 24px;
+    text-align:center;font-size:.85rem}
+  footer .wrap{max-width:800px}
+  footer p{margin-bottom:8px;line-height:1.7}
+  footer a{color:var(--gold)}
+  .footer-links{display:flex;gap:24px;justify-content:center;margin:24px 0 16px;flex-wrap:wrap}
+  .footer-links a{font-size:.82rem}
+
+  @media(max-width:900px){
+    .policy-body{grid-template-columns:1fr;gap:32px;padding:48px 24px 72px}
+    .toc{position:static;padding:20px;background:var(--white);border-radius:12px;
+      border:1px solid var(--line)}
+    .policy-header{padding:56px 0 48px}
+    .policy-content table{font-size:.78rem}
+    .policy-content th,.policy-content td{padding:8px 10px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">A</div>
+      <div>Arima Persada</div>
+    </a>
+    <a href="index.html" class="nav-back">← Kembali ke Portal</a>
+  </div>
+</nav>
+
+<header class="policy-header">
+  <div class="wrap">
+    <span class="kicker">Dokumen Resmi</span>
+    <h1>Kebijakan <span class="serif" style="color:var(--gold-soft)">Privasi</span></h1>
+    <p>Dokumen ini menjelaskan bagaimana LPKS Arima Persada mengumpulkan, menggunakan, dan melindungi data pribadi Anda.</p>
+    <div class="meta">
+      <div><strong>Berlaku untuk:</strong> PT Arima Persada (LPKS Arima Persada)</div>
+      <div><strong>NIB:</strong> 1205260065173</div>
+      <div><strong>Terakhir diperbarui:</strong> <span class="placeholder">[ISI Tanggal]</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="policy-body">
+  <aside class="toc">
+    <h4>Daftar Isi</h4>
+    <ul>
+      <li><a href="#pengendali">Pengendali Data</a></li>
+      <li><a href="#data-dikumpulkan">Data yang Dikumpulkan</a></li>
+      <li><a href="#tujuan">Tujuan Penggunaan</a></li>
+      <li><a href="#pihak-ketiga">Pihak Ketiga</a></li>
+      <li><a href="#penyimpanan">Penyimpanan & Keamanan</a></li>
+      <li><a href="#hak">Hak Subjek Data</a></li>
+      <li><a href="#perubahan">Perubahan</a></li>
+      <li><a href="#kontak-privasi">Kontak</a></li>
+    </ul>
+  </aside>
+
+  <main class="policy-content">
+
+    <section id="pengendali">
+      <h2>Pengendali Data Pribadi</h2>
+      <p>Kebijakan Privasi ini berlaku untuk data pribadi yang dikelola oleh:</p>
+      <ul>
+        <li><strong>Badan Hukum:</strong> PT Arima Persada</li>
+        <li><strong>NIB:</strong> 1205260065173</li>
+        <li><strong>Nama Layanan:</strong> LPKS Arima Persada</li>
+        <li><strong>Alamat:</strong> <span class="placeholder">[ISI Alamat Lengkap]</span></li>
+        <li><strong>Email Privasi:</strong> <span class="placeholder">[ISI Email]</span></li>
+        <li><strong>Nomor WhatsApp:</strong> <span class="placeholder">[ISI Nomor]</span></li>
+        <li><strong>Izin LPKS:</strong> <span class="placeholder">[ISI Nomor]</span></li>
+        <li><strong>Akreditasi:</strong> <span class="placeholder">[ISI Peringkat & Nomor]</span></li>
+      </ul>
+      <div class="callout">Kebijakan ini disusun berdasarkan Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi.</div>
+    </section>
+
+    <section id="data-dikumpulkan">
+      <h2>Data Pribadi yang Kami Kumpulkan</h2>
+      <p>Sehubungan dengan proses pendaftaran, pelatihan, dan penyaluran kerja, kami mengumpulkan:</p>
+
+      <h3>1. Data Identitas</h3>
+      <ul>
+        <li>Nama lengkap, jenis kelamin, tanggal lahir</li>
+        <li>KTP, Kartu Keluarga</li>
+        <li>Alamat, nomor telepon/WhatsApp, email</li>
+        <li>Foto terbaru</li>
+      </ul>
+
+      <h3>2. Data Pendidikan</h3>
+      <ul>
+        <li>Ijazah pendidikan terakhir</li>
+        <li>Transkrip nilai</li>
+      </ul>
+
+      <h3>3. Data Kesehatan</h3>
+      <ul>
+        <li>Hasil pra-MCU dan MCU</li>
+        <li>Hasil psikotes</li>
+      </ul>
+
+      <h3>4. Data Keluarga</h3>
+      <ul>
+        <li>Surat izin orang tua / wali</li>
+        <li>Kontak darurat</li>
+      </ul>
+
+      <h3>5. Data Sertifikasi & Keberangkatan</h3>
+      <p>Dikumpulkan jika Anda lanjut ke tahap matching dan keberangkatan:</p>
+      <ul>
+        <li>Sertifikat JFT / JLPT</li>
+        <li>Sertifikat SSW</li>
+        <li>Paspor</li>
+        <li>Dokumen COE dan visa kerja</li>
+      </ul>
+    </section>
+
+    <section id="tujuan">
+      <h2>Tujuan Penggunaan Data</h2>
+      <p>Data pribadi Anda digunakan hanya untuk tujuan berikut, sesuai tahap yang Anda ikuti:</p>
+      <table>
+        <thead>
+          <tr><th>Tahap</th><th>Data yang Digunakan</th><th>Tujuan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pendaftaran & Seleksi</td><td>Identitas, psikotes, pra-MCU</td><td>Verifikasi kelayakan peserta</td></tr>
+          <tr><td>Pelatihan</td><td>Identitas, data kesehatan</td><td>Administrasi asrama & keselamatan peserta</td></tr>
+          <tr><td>Sertifikasi</td><td>Identitas, hasil ujian</td><td>Pendaftaran ujian JFT/JLPT & SSW</td></tr>
+          <tr><td>Matching Job</td><td>Identitas, ijazah, sertifikat, CV</td><td>Pengajuan ke SO/TSK dan perusahaan Jepang</td></tr>
+          <tr><td>COE & Visa</td><td>Paspor, MCU lengkap, dokumen imigrasi</td><td>Pengurusan izin kerja Jepang, pelaporan BP2MI</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pihak-ketiga">
+      <h2>Pembagian Data dengan Pihak Ketiga</h2>
+      <p>Data pribadi Anda hanya dibagikan kepada pihak yang berkepentingan langsung dalam proses:</p>
+      <ul>
+        <li><strong>SO / TSK</strong> — untuk keperluan matching job dengan perusahaan Jepang</li>
+        <li><strong>Rumah sakit mitra</strong> — untuk pelaksanaan MCU</li>
+        <li><strong>Lembaga sertifikasi</strong> — JFT/JLPT dan SSW</li>
+        <li><strong>BP2MI & Disnaker</strong> — kewajiban pelaporan ketenagakerjaan</li>
+        <li><strong>Kedutaan Jepang & imigrasi</strong> — pengurusan visa kerja</li>
+      </ul>
+      <div class="callout">Kami <strong>tidak menjual</strong> data pribadi Anda dan <strong>tidak membagikannya</strong> untuk tujuan komersial lain di luar yang tercantum di atas.</div>
+    </section>
+
+    <section id="penyimpanan">
+      <h2>Penyimpanan & Keamanan Data</h2>
+      <p>Data pribadi disimpan dalam sistem dengan akses terbatas hanya untuk staf yang berwenang. Kami menerapkan langkah keamanan teknis dan organisasi untuk melindungi data dari akses tidak sah.</p>
+
+      <h3>Masa Retensi</h3>
+      <ul>
+        <li><strong>Data pendaftar tidak lanjut:</strong> <span class="placeholder">[ISI, mis. 1 tahun]</span> sejak pendaftaran</li>
+        <li><strong>Data peserta aktif:</strong> selama masa pelatihan + <span class="placeholder">[ISI, mis. 3 tahun]</span></li>
+        <li><strong>Data alumni & penempatan:</strong> <span class="placeholder">[ISI, sesuai kewajiban BP2MI]</span></li>
+      </ul>
+      <p>Setelah masa retensi berakhir, data akan dihapus atau dianonimkan kecuali diwajibkan lain oleh peraturan perundang-undangan.</p>
+    </section>
+
+    <section id="hak">
+      <h2>Hak Anda sebagai Subjek Data</h2>
+      <p>Sesuai UU No. 27 Tahun 2022, Anda memiliki hak untuk:</p>
+      <ul>
+        <li>Mengakses data pribadi yang kami simpan</li>
+        <li>Memperbaiki data yang tidak akurat atau tidak lengkap</li>
+        <li>Meminta penghapusan data (dengan catatan kewajiban hukum tertentu)</li>
+        <li>Menarik persetujuan penggunaan data</li>
+        <li>Mengajukan keberatan atas pemrosesan tertentu</li>
+        <li>Mendapatkan salinan data dalam format yang dapat dibaca</li>
+      </ul>
+      <p>Permintaan dapat dikirim ke <strong><span class="placeholder">[ISI Email Privasi]</span></strong> dan akan diproses maksimal <strong>14 hari kerja</strong>.</p>
+    </section>
+
+    <section id="perubahan">
+      <h2>Perubahan Kebijakan</h2>
+      <p>Kebijakan ini dapat diperbarui seiring perubahan layanan atau peraturan. Tanggal pembaruan terakhir tercantum di bagian atas halaman. Perubahan material akan diumumkan melalui kanal resmi kami.</p>
+    </section>
+
+    <section id="kontak-privasi">
+      <h2>Kontak</h2>
+      <p>Untuk pertanyaan, permintaan akses, atau keluhan terkait data pribadi:</p>
+      <ul>
+        <li><strong>Email:</strong> <span class="placeholder">[ISI Email]</span></li>
+        <li><strong>WhatsApp:</strong> <span class="placeholder">[ISI Nomor]</span></li>
+        <li><strong>Alamat:</strong> <span class="placeholder">[ISI Alamat]</span></li>
+        <li><strong>Jam operasional:</strong> Senin – Sabtu, 08.00 – 17.00 WIB</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--white)">PT Arima Persada</strong> · NIB 1205260065173</p>
+    <p>LPKS Arima Persada — Lembaga Pelatihan Kerja Swasta Resmi</p>
+    <div class="footer-links">
+      <a href="index.html">Beranda</a>
+      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
+    </div>
+    <p style="color:rgba(255,255,255,.4);margin-top:16px">© 2026 PT Arima Persada. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+</body>
+</html>
