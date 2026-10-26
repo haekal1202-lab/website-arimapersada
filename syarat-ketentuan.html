@@ -6,385 +6,260 @@
 <title>Syarat & Ketentuan — LPKS Arima Persada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#fbfbfd;--dark:#0b1730;--dark-2:#12224a;
-    --text:#1d1d1f;--muted:#6e6e73;--border:rgba(0,0,0,.08);
-    --gold:#c9a24a;--sidebar-w:260px;--ease:cubic-bezier(.2,.7,.2,1);
+  :root {
+    --bg: #ffffff; --text: #1a1a1a; --text-muted: #666666;
+    --navy: #0a1327; --gold: #c9a24a; --border: rgba(0,0,0,0.08);
+    --font-serif: 'Playfair Display', serif; --font-sans: 'Inter', sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Inter',system-ui,sans-serif;
-    background:var(--bg);color:var(--text);line-height:1.6;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  a { text-decoration: none; color: inherit; }
 
-  /* SIDEBAR */
-  .sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar-w);
-    background:#fff;border-right:1px solid var(--border);
-    padding:28px 20px;display:flex;flex-direction:column;
-    z-index:100;overflow-y:auto; box-shadow:4px 0 24px -10px rgba(0,0,0,0.03);}
-  .sidebar-brand{display:flex;align-items:center;gap:12px;padding:8px;margin-bottom:32px}
-  .brand-mark{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-  .brand-info strong{font-size:.92rem;font-weight:700;display:block}
-  .brand-info small{font-size:.68rem;color:var(--muted);margin-top:2px;display:block}
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; height: 80px;
+    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border); z-index: 1000;
+    display: flex; align-items: center;
+  }
+  .nav-inner {
+    max-width: 1000px; width: 100%; margin: 0 auto; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo-box { width: 36px; height: 36px; }
+  .brand-text { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; color: var(--text); }
+  .nav-cta { padding: 10px 24px; border-radius: 99px; background: var(--navy); color: #fff; font-size: 0.85rem; font-weight: 500; transition: all 0.3s; }
+  .nav-cta:hover { background: transparent; color: var(--navy); border: 1px solid var(--navy); }
 
-  .back-link{display:flex;align-items:center;gap:8px;padding:9px 14px;
-    border-radius:8px;font-size:.85rem;color:var(--muted);
-    transition:all .2s;margin-bottom:24px}
-  .back-link:hover{color:var(--text);background:rgba(0,0,0,.03)}
+  .page-header { padding: 160px 32px 80px; max-width: 800px; margin: 0 auto; text-align: center; }
+  .kicker { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+  .page-h1 { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; line-height: 1.1; margin-bottom: 24px; }
+  .page-sub { font-size: 1.1rem; color: var(--text-muted); }
+  .page-meta { font-size: 0.85rem; color: var(--text-muted); margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .page-meta strong { color: var(--text); }
 
-  .sidebar-label{font-size:.68rem;font-weight:600;letter-spacing:.15em;
-    text-transform:uppercase;color:var(--muted);
-    padding:0 14px;margin-bottom:12px}
+  .page-body { padding: 0 32px 120px; max-width: 800px; margin: 0 auto; }
+  .policy-section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+  .policy-section:last-child { border-bottom: none; }
+  .policy-section h2 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 20px; color: var(--text); }
+  .policy-section h3 { font-size: 1.05rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px; }
+  .policy-section p { margin-bottom: 16px; color: var(--text-muted); font-size: 0.98rem; }
+  .policy-section ul { padding-left: 20px; margin-bottom: 16px; }
+  .policy-section li { margin-bottom: 10px; color: var(--text-muted); font-size: 0.95rem; }
+  .policy-section li strong { color: var(--text); }
+  .policy-section a { color: var(--gold); text-decoration: underline; }
 
-  .sidebar-nav{display:flex;flex-direction:column;gap:2px;flex:1}
-  .sidebar-nav a{padding:9px 14px;border-radius:8px;font-size:.85rem;
-    font-weight:500;color:var(--muted);transition:all .2s var(--ease)}
-  .sidebar-nav a:hover{color:var(--text);background:rgba(0,0,0,.03)}
-  .sidebar-nav a.active{color:var(--text);background:rgba(201,162,74,.1);font-weight:600}
+  .callout { background: #fafafa; border-left: 3px solid var(--gold); padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 24px 0; font-size: 0.95rem; color: var(--text); }
 
-  /* MOBILE BAR */
-  .mobile-bar{display:none;position:fixed;top:0;left:0;right:0;height:60px;
-    background:rgba(255,255,255,.9);backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);
-    z-index:99;align-items:center;justify-content:space-between;padding:0 20px}
-  .mobile-bar .brand-mini{display:flex;align-items:center;gap:10px;
-    font-weight:700;font-size:.92rem}
-  .mobile-bar .brand-mark{width:30px;height:30px}
-  .menu-toggle{background:none;border:none;color:var(--text);cursor:pointer;padding:8px}
-  .sidebar-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);
-    z-index:99;opacity:0;transition:opacity .3s}
-  .sidebar-backdrop.show{display:block;opacity:1}
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item summary { cursor: pointer; font-weight: 600; font-size: 1rem; padding: 20px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; color: var(--gold); font-size: 1.5rem; font-weight: 300; transition: transform 0.3s; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { padding-bottom: 20px; color: var(--text-muted); font-size: 0.95rem; }
 
-  /* MAIN */
-  .main{margin-left:var(--sidebar-w);min-height:100vh}
+  footer { padding: 40px 32px; border-top: 1px solid var(--border); background: #fff; }
+  .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 0.85rem; color: var(--text-muted); }
+  .footer-inner strong { color: var(--text); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a:hover { color: var(--gold); }
 
-  .page-header{padding:140px 64px 80px;max-width:900px;margin:0 auto}
-  .kicker{display:inline-block;font-size:.72rem;font-weight:600;
-    letter-spacing:.15em;text-transform:uppercase;color:var(--gold);
-    margin-bottom:20px}
-  .page-h1{font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem);font-weight:600;
-    letter-spacing:-.02em;line-height:1.05;margin-bottom:20px}
-  .page-sub{font-size:1.05rem;color:var(--muted);max-width:600px;
-    line-height:1.6;margin-bottom:24px}
-  .page-meta{font-size:.82rem;color:var(--muted);
-    padding-top:20px;border-top:1px solid var(--border)}
-  .page-meta strong{color:var(--text)}
-
-  .page-body{padding:0 64px 120px;max-width:900px;margin:0 auto}
-  .policy-section{padding:40px 0;border-bottom:1px solid var(--border);scroll-margin-top:80px}
-  .policy-section:first-child{padding-top:0}
-  .policy-section:last-child{border-bottom:none;padding-bottom:0}
-  .policy-section h2{font-size:1.4rem;font-weight:700;letter-spacing:-.02em;
-    margin-bottom:20px;display:flex;align-items:center;gap:14px}
-  .policy-num{width:32px;height:32px;flex-shrink:0;border-radius:8px;
-    background:var(--dark);color:var(--gold);display:grid;place-items:center;
-    font-size:.85rem;font-weight:700}
-  .policy-section h3{font-size:1rem;font-weight:600;margin-top:24px;margin-bottom:12px;letter-spacing:-.01em}
-  .policy-section h3:first-of-type{margin-top:0}
-  .policy-section p{color:#334155;font-size:.95rem;margin-bottom:14px;line-height:1.7}
-  .policy-section ul,.policy-section ol{padding-left:22px;margin-bottom:16px}
-  .policy-section li{margin-bottom:10px;color:#334155;font-size:.92rem;line-height:1.7}
-  .policy-section li strong{color:var(--text)}
-  .policy-section a{color:var(--gold);text-decoration:underline}
-
-  .callout{background:rgba(201,162,74,.08);border-left:3px solid var(--gold);
-    padding:16px 20px;border-radius:0 8px 8px 0;margin:16px 0;
-    font-size:.88rem;color:#334155;line-height:1.7}
-  .callout strong{color:var(--text)}
-
-  .faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;
-    padding:0;margin-bottom:10px;transition:all .3s var(--ease)}
-  .faq-item[open]{border-color:var(--gold)}
-  .faq-item summary{cursor:pointer;font-weight:600;font-size:.92rem;
-    padding:18px 22px;list-style:none;display:flex;justify-content:space-between;
-    align-items:center;gap:16px;letter-spacing:-.01em}
-  .faq-item summary::-webkit-details-marker{display:none}
-  .faq-item summary::after{content:"";width:10px;height:10px;
-    border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
-    transform:rotate(-45deg);transition:transform .3s;flex-shrink:0;margin-right:6px}
-  .faq-item[open] summary::after{transform:rotate(45deg);border-color:var(--gold)}
-  .faq-item p{padding:0 22px 18px;color:var(--muted);font-size:.88rem;line-height:1.7}
-
-  footer{padding:40px 64px;border-top:1px solid var(--border);background:#fff}
-  .footer-inner{max-width:900px;margin:0 auto;
-    display:flex;justify-content:space-between;align-items:center;
-    flex-wrap:wrap;gap:20px;font-size:.82rem;color:var(--muted)}
-  .footer-inner .foot-left strong{color:var(--text)}
-  .footer-inner .foot-right{display:flex;gap:20px}
-  .footer-inner .foot-right a:hover{color:var(--gold)}
-
-  @media(max-width:900px){
-    .sidebar{transform:translateX(-100%);transition:transform .35s var(--ease)}
-    .sidebar.open{transform:translateX(0)}
-    .main{margin-left:0;padding-top:60px}
-    .mobile-bar{display:flex}
-    .page-header{padding:60px 24px 40px}
-    .page-body{padding:0 24px 80px}
-    footer{padding:32px 24px}
-    .footer-inner{flex-direction:column;text-align:center}
+  @media(max-width: 768px) {
+    .nav-inner { padding: 0 24px; }
+    .page-header, .page-body { padding-left: 24px; padding-right: 24px; }
+    .footer-inner { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<header class="mobile-bar">
-  <a href="index.html" class="brand-mini">
-    <div class="brand-mark">
-      <img src="logo.png" alt="Logo" style="width:100%; height:100%; object-fit:contain; border-radius:8px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-      <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; border-radius:8px; box-shadow: 0 4px 12px rgba(217,4,41,0.2);">
-        <rect width="100" height="100" rx="20" fill="#D90429"/>
-        <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text>
-      </svg>
-    </div>
-    <div>Arima Persada</div>
-  </a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-  </button>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="logo-box">
+        <img src="logo.png" alt="Logo" style="width:100%; height:100%; object-fit:contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+          <rect width="100" height="100" rx="20" fill="#0a1327"/>
+          <path d="M 22 30 L 78 30 M 28 40 L 72 40 M 34 40 L 34 80 M 66 40 L 66 80" stroke="#c9a24a" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="50" cy="55" r="12" stroke="#c9a24a" stroke-width="4"/>
+          <path d="M 50 43 L 50 67 M 38 55 L 62 55" stroke="#c9a24a" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">Arima<span style="color:var(--gold);font-style:italic;">.</span></div>
+    </a>
+    <a href="index.html" class="nav-cta">← Kembali ke Portal</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <span class="kicker">Dokumen Resmi</span>
+  <h1 class="page-h1">Syarat & Ketentuan</h1>
+  <p class="page-sub">Dokumen ini mengatur hubungan antara LPKS Arima Persada dan peserta pelatihan, termasuk biaya, sertifikasi, penempatan, dan kewajiban.</p>
+  <div class="page-meta">
+    <strong>Berlaku untuk:</strong> PT Arima Bangkit Persada (LPKS Arima Persada) · NIB 1205260065173
+  </div>
 </header>
 
-<div class="sidebar-backdrop" id="backdrop"></div>
+<div class="page-body">
+  <section class="policy-section">
+    <h2>01. Identitas Penyedia Layanan</h2>
+    <ul>
+      <li><strong>Badan Hukum:</strong> PT Arima Bangkit Persada</li>
+      <li><strong>NIB:</strong> 1205260065173</li>
+      <li><strong>Nama Layanan:</strong> LPKS Arima Persada</li>
+      <li><strong>Alamat:</strong> Jl. Sidoharjo 1, Desa Negara Ratu, Kecamatan Natar, Kabupaten Lampung Selatan, Lampung</li>
+      <li><strong>Email:</strong> arimapersada@gmail.com</li>
+      <li><strong>Telepon/WhatsApp:</strong> 082375128230</li>
+    </ul>
+    <div class="callout">Dengan mendaftar, Anda menyatakan telah membaca, memahami, dan menyetujui syarat dan ketentuan ini.</div>
+  </section>
 
-<aside class="sidebar" id="sidebar">
-  <a href="index.html" class="sidebar-brand">
-    <div class="brand-mark">
-      <img src="logo.png" alt="Logo" style="width:100%; height:100%; object-fit:contain; border-radius:10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-      <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; border-radius:10px; box-shadow: 0 4px 12px rgba(217,4,41,0.2);">
-        <rect width="100" height="100" rx="20" fill="#D90429"/>
-        <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text>
-      </svg>
+  <section class="policy-section">
+    <h2>02. Biaya & Pembayaran</h2>
+    <h3>Komponen Biaya</h3>
+    <ul>
+      <li><strong>Biaya pendaftaran:</strong> Rp550.000 (administrasi, psikotes, pra-MCU)</li>
+      <li><strong>Biaya belajar:</strong> Rp7.500.000 – Rp10.500.000 (tergantung jalur)</li>
+      <li><strong>Total estimasi:</strong> Rp8.050.000 – Rp11.050.000</li>
+    </ul>
+    <h3>Skema Pembayaran</h3>
+    <ul>
+      <li>Biaya belajar dapat dicicil <strong>3 termin</strong></li>
+      <li>Biaya matching job dicicil pada setiap tahap yang lulus</li>
+    </ul>
+    <h3>Biaya yang Tidak Termasuk</h3>
+    <ul>
+      <li>MCU di rumah sakit mitra</li>
+      <li>Paspor dan dokumen kependudukan</li>
+      <li>Tiket pesawat keberangkatan</li>
+      <li>Biaya hidup pribadi di luar asrama</li>
+    </ul>
+  </section>
+
+  <section class="policy-section">
+    <h2>03. Ketentuan Sertifikasi</h2>
+    <ul>
+      <li>Kelulusan JFT/JLPT dan SSW ditentukan oleh <strong>lembaga sertifikasi resmi</strong>, bukan oleh LPKS.</li>
+      <li>LPKS menyediakan pelatihan dan pendampingan, namun <strong>tidak menjamin kelulusan ujian</strong>.</li>
+      <li>Biaya ujian ulang ditanggung peserta.</li>
+      <li>Peserta yang belum lulus dapat mengikuti kelas pendampingan tambahan.</li>
+      <li>Sertifikat yang diterima peserta: <strong>JFT/JLPT</strong> (bahasa) dan <strong>SSW</strong> (keahlian).</li>
+    </ul>
+  </section>
+
+  <section class="policy-section">
+    <h2>04. Ketentuan Penempatan Kerja</h2>
+    <ul>
+      <li>LPKS memfasilitasi matching job dengan SO/TSK.</li>
+      <li>Keputusan akhir penerimaan kerja berada pada perusahaan penerima di Jepang.</li>
+      <li>LPKS <strong>tidak memberikan jaminan tertulis</strong> atas penempatan kerja.</li>
+      <li>Sektor dan prefektur penempatan menyesuaikan kebutuhan tenaga kerja Jepang saat itu.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section">
+    <h2>05. Kewajiban Peserta</h2>
+    <h3>Saat Pendaftaran</h3>
+    <ul>
+      <li>Menyampaikan data dan dokumen yang <strong>benar dan lengkap</strong></li>
+      <li>Mengikuti psikotes dan pra-MCU sesuai jadwal</li>
+      <li>Melampirkan surat izin orang tua/wali (jika di bawah 21 tahun)</li>
+    </ul>
+    <h3>Selama Pelatihan</h3>
+    <ul>
+      <li>Mengikuti seluruh jadwal pelatihan</li>
+      <li>Mematuhi aturan asrama</li>
+      <li>Menjaga nama baik lembaga</li>
+      <li>Menggunakan bahasa Jepang dalam keseharian asrama</li>
+    </ul>
+    <h3>Selama Proses Keberangkatan</h3>
+    <ul>
+      <li>Melengkapi dokumen COE dan visa tepat waktu</li>
+      <li>Mengikuti orientasi pra-keberangkatan</li>
+      <li>Mematuhi kewajiban pelaporan ke BP2MI</li>
+    </ul>
+  </section>
+
+  <section class="policy-section">
+    <h2>06. Pembatalan & Pengunduran Diri</h2>
+    <ul>
+      <li>Pengunduran diri disampaikan <strong>tertulis</strong> via email atau WhatsApp resmi.</li>
+      <li>Biaya pendaftaran tidak dapat dikembalikan setelah psikotes/pra-MCU dilaksanakan.</li>
+      <li>Biaya belajar dikembalikan sebagian jika peserta mengundurkan diri <strong>sebelum pelatihan dimulai</strong>.</li>
+      <li>Setelah pelatihan dimulai, biaya belajar <strong>tidak dapat dikembalikan</strong>.</li>
+      <li>Peserta yang dikeluarkan karena pelanggaran berat <strong>tidak berhak atas pengembalian biaya</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section">
+    <h2>07. Force Majeure</h2>
+    <p>LPKS tidak bertanggung jawab atas keterlambatan atau kegagalan yang disebabkan oleh:</p>
+    <ul>
+      <li>Perubahan kebijakan imigrasi atau ketenagakerjaan Jepang</li>
+      <li>Bencana alam, pandemi, atau keadaan darurat</li>
+      <li>Kebijakan pemerintah Indonesia atau Jepang</li>
+      <li>Keadaan lain di luar kendali wajar LPKS</li>
+    </ul>
+  </section>
+
+  <section class="policy-section">
+    <h2>08. Pertanyaan yang Sering Diajukan</h2>
+    <div class="faq-item">
+      <details>
+        <summary>Berapa total biaya yang harus saya siapkan?</summary>
+        <p>Rp8.050.000 – Rp11.050.000 (pendaftaran Rp550.000 + belajar Rp7.500.000–Rp10.500.000). Biaya belajar dapat dicicil 3 termin.</p>
+      </details>
     </div>
-    <div class="brand-info">
-      <strong>Arima Persada</strong>
-      <small>LPKS Resmi · NIB 1205260065173</small>
+    <div class="faq-item">
+      <details>
+        <summary>Apakah ada jaminan kerja setelah lulus?</summary>
+        <p>Tidak ada jaminan tertulis. Kami memfasilitasi matching job dengan SO/TSK, namun keputusan akhir ada di perusahaan Jepang.</p>
+      </details>
     </div>
-  </a>
-
-  <a href="index.html" class="back-link">← Kembali ke Portal</a>
-
-  <div class="sidebar-label">Syarat & Ketentuan</div>
-  <nav class="sidebar-nav">
-    <a href="#identitas" class="active">Identitas</a>
-    <a href="#biaya">Biaya & Pembayaran</a>
-    <a href="#sertifikasi">Sertifikasi</a>
-    <a href="#penempatan">Penempatan</a>
-    <a href="#kewajiban">Kewajiban Peserta</a>
-    <a href="#pembatalan">Pembatalan</a>
-    <a href="#force-majeure">Force Majeure</a>
-    <a href="#faq">FAQ</a>
-    <a href="#hukum">Hukum</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
-</aside>
-
-<main class="main">
-  <header class="page-header">
-    <span class="kicker">Dokumen Resmi</span>
-    <h1 class="page-h1">Syarat & Ketentuan</h1>
-    <p class="page-sub">Dokumen ini mengatur hubungan antara LPKS Arima Persada dan peserta pelatihan, termasuk biaya, sertifikasi, penempatan, dan kewajiban.</p>
-    <div class="page-meta">
-      <strong>Berlaku untuk:</strong> PT Arima Bangkit Persada (LPKS Arima Persada) · NIB 1205260065173
+    <div class="faq-item">
+      <details>
+        <summary>Bagaimana jika saya gagal ujian JFT/JLPT?</summary>
+        <p>Peserta dapat mengulang ujian. Biaya ujian ulang ditanggung peserta. LPKS menyediakan kelas pendampingan tambahan sebelum ujian ulang.</p>
+      </details>
     </div>
-  </header>
+    <div class="faq-item">
+      <details>
+        <summary>Apakah lembaga ini legal?</summary>
+        <p>Ya. Dikelola PT Arima Bangkit Persada dengan NIB 1205260065173. Verifikasi NIB di <a href="https://oss.go.id" target="_blank" rel="noopener">oss.go.id</a>.</p>
+      </details>
+    </div>
+  </section>
 
-  <div class="page-body">
-    <section class="policy-section" id="identitas">
-      <h2><span class="policy-num">01</span>Identitas Penyedia Layanan</h2>
-      <ul>
-        <li><strong>Badan Hukum:</strong> PT Arima Bangkit Persada</li>
-        <li><strong>NIB:</strong> 1205260065173</li>
-        <li><strong>Nama Layanan:</strong> LPKS Arima Persada</li>
-        <li><strong>Alamat:</strong> Jl. Sidoharjo 1, Desa Negara Ratu, Kecamatan Natar, Kabupaten Lampung Selatan, Lampung</li>
-        <li><strong>Email:</strong> arimapersada@gmail.com</li>
-        <li><strong>Telepon/WhatsApp:</strong> 082375128230</li>
-      </ul>
-      <div class="callout">Dengan mendaftar, Anda menyatakan telah membaca, memahami, dan menyetujui syarat dan ketentuan ini.</div>
-    </section>
+  <section class="policy-section">
+    <h2>09. Hukum yang Berlaku</h2>
+    <p>Syarat dan ketentuan ini tunduk pada hukum Republik Indonesia. Segala sengketa yang timbul akan diselesaikan secara musyawarah terlebih dahulu, dan jika tidak tercapai kesepakatan, melalui jalur hukum yang berlaku.</p>
+  </section>
 
-    <section class="policy-section" id="biaya">
-      <h2><span class="policy-num">02</span>Biaya & Pembayaran</h2>
-      <h3>Komponen Biaya</h3>
-      <ul>
-        <li><strong>Biaya pendaftaran:</strong> Rp550.000 (administrasi, psikotes, pra-MCU)</li>
-        <li><strong>Biaya belajar:</strong> Rp7.500.000 – Rp10.500.000 (tergantung jalur)</li>
-        <li><strong>Total estimasi:</strong> Rp8.050.000 – Rp11.050.000</li>
-      </ul>
-      <h3>Skema Pembayaran</h3>
-      <ul>
-        <li>Biaya belajar dapat dicicil <strong>3 termin</strong></li>
-        <li>Biaya matching job dicicil pada setiap tahap yang lulus</li>
-      </ul>
-      <h3>Biaya yang Tidak Termasuk</h3>
-      <ul>
-        <li>MCU di rumah sakit mitra</li>
-        <li>Paspor dan dokumen kependudukan</li>
-        <li>Tiket pesawat keberangkatan</li>
-        <li>Biaya hidup pribadi di luar asrama</li>
-      </ul>
-    </section>
+  <section class="policy-section">
+    <h2>10. Kontak</h2>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:arimapersada@gmail.com">arimapersada@gmail.com</a></li>
+      <li><strong>Telepon/WhatsApp:</strong> 082375128230</li>
+      <li><strong>Alamat:</strong> Jl. Sidoharjo 1, Desa Negara Ratu, Kecamatan Natar, Kabupaten Lampung Selatan, Lampung</li>
+      <li><strong>Jam Belajar:</strong> Senin – Jumat, 08.00 – 15.00 WIB</li>
+    </ul>
+  </section>
+</div>
 
-    <section class="policy-section" id="sertifikasi">
-      <h2><span class="policy-num">03</span>Ketentuan Sertifikasi</h2>
-      <ul>
-        <li>Kelulusan JFT/JLPT dan SSW ditentukan oleh <strong>lembaga sertifikasi resmi</strong>, bukan oleh LPKS.</li>
-        <li>LPKS menyediakan pelatihan dan pendampingan, namun <strong>tidak menjamin kelulusan ujian</strong>.</li>
-        <li>Biaya ujian ulang ditanggung peserta.</li>
-        <li>Peserta yang belum lulus dapat mengikuti kelas pendampingan tambahan.</li>
-        <li>Sertifikat yang diterima peserta: <strong>JFT/JLPT</strong> (bahasa) dan <strong>SSW</strong> (keahlian).</li>
-      </ul>
-    </section>
-
-    <section class="policy-section" id="penempatan">
-      <h2><span class="policy-num">04</span>Ketentuan Penempatan Kerja</h2>
-      <ul>
-        <li>LPKS memfasilitasi matching job dengan SO/TSK.</li>
-        <li>Keputusan akhir penerimaan kerja berada pada perusahaan penerima di Jepang.</li>
-        <li>LPKS <strong>tidak memberikan jaminan tertulis</strong> atas penempatan kerja.</li>
-        <li>Sektor dan prefektur penempatan menyesuaikan kebutuhan tenaga kerja Jepang saat itu.</li>
-      </ul>
-    </section>
-
-    <section class="policy-section" id="kewajiban">
-      <h2><span class="policy-num">05</span>Kewajiban Peserta</h2>
-      <h3>Saat Pendaftaran</h3>
-      <ul>
-        <li>Menyampaikan data dan dokumen yang <strong>benar dan lengkap</strong></li>
-        <li>Mengikuti psikotes dan pra-MCU sesuai jadwal</li>
-        <li>Melampirkan surat izin orang tua/wali (jika di bawah 21 tahun)</li>
-      </ul>
-      <h3>Selama Pelatihan</h3>
-      <ul>
-        <li>Mengikuti seluruh jadwal pelatihan</li>
-        <li>Mematuhi aturan asrama</li>
-        <li>Menjaga nama baik lembaga</li>
-        <li>Menggunakan bahasa Jepang dalam keseharian asrama</li>
-      </ul>
-      <h3>Selama Proses Keberangkatan</h3>
-      <ul>
-        <li>Melengkapi dokumen COE dan visa tepat waktu</li>
-        <li>Mengikuti orientasi pra-keberangkatan</li>
-        <li>Mematuhi kewajiban pelaporan ke BP2MI</li>
-      </ul>
-    </section>
-
-    <section class="policy-section" id="pembatalan">
-      <h2><span class="policy-num">06</span>Pembatalan & Pengunduran Diri</h2>
-      <ul>
-        <li>Pengunduran diri disampaikan <strong>tertulis</strong> via email atau WhatsApp resmi.</li>
-        <li>Biaya pendaftaran tidak dapat dikembalikan setelah psikotes/pra-MCU dilaksanakan.</li>
-        <li>Biaya belajar dikembalikan sebagian jika peserta mengundurkan diri <strong>sebelum pelatihan dimulai</strong>.</li>
-        <li>Setelah pelatihan dimulai, biaya belajar <strong>tidak dapat dikembalikan</strong>.</li>
-        <li>Peserta yang dikeluarkan karena pelanggaran berat <strong>tidak berhak atas pengembalian biaya</strong>.</li>
-      </ul>
-    </section>
-
-    <section class="policy-section" id="force-majeure">
-      <h2><span class="policy-num">07</span>Force Majeure</h2>
-      <p>LPKS tidak bertanggung jawab atas keterlambatan atau kegagalan yang disebabkan oleh:</p>
-      <ul>
-        <li>Perubahan kebijakan imigrasi atau ketenagakerjaan Jepang</li>
-        <li>Bencana alam, pandemi, atau keadaan darurat</li>
-        <li>Kebijakan pemerintah Indonesia atau Jepang</li>
-        <li>Keadaan lain di luar kendali wajar LPKS</li>
-      </ul>
-    </section>
-
-    <section class="policy-section" id="faq">
-      <h2><span class="policy-num">08</span>Pertanyaan yang Sering Diajukan</h2>
-      <div class="faq-item">
-        <details>
-          <summary>Berapa total biaya yang harus saya siapkan?</summary>
-          <p>Rp8.050.000 – Rp11.050.000 (pendaftaran Rp550.000 + belajar Rp7.500.000–Rp10.500.000). Biaya belajar dapat dicicil 3 termin.</p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Apakah ada jaminan kerja setelah lulus?</summary>
-          <p>Tidak ada jaminan tertulis. Kami memfasilitasi matching job dengan SO/TSK, namun keputusan akhir ada di perusahaan Jepang.</p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Bagaimana jika saya gagal ujian JFT/JLPT?</summary>
-          <p>Peserta dapat mengulang ujian. Biaya ujian ulang ditanggung peserta. LPKS menyediakan kelas pendampingan tambahan sebelum ujian ulang.</p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Apakah lembaga ini legal?</summary>
-          <p>Ya. Dikelola PT Arima Bangkit Persada dengan NIB 1205260065173. Verifikasi NIB di <a href="https://oss.go.id" target="_blank" rel="noopener">oss.go.id</a>.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="policy-section" id="hukum">
-      <h2><span class="policy-num">09</span>Hukum yang Berlaku</h2>
-      <p>Syarat dan ketentuan ini tunduk pada hukum Republik Indonesia. Segala sengketa yang timbul akan diselesaikan secara musyawarah terlebih dahulu, dan jika tidak tercapai kesepakatan, melalui jalur hukum yang berlaku.</p>
-    </section>
-
-    <section class="policy-section" id="kontak">
-      <h2><span class="policy-num">10</span>Kontak</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:arimapersada@gmail.com">arimapersada@gmail.com</a></li>
-        <li><strong>Telepon/WhatsApp:</strong> 082375128230</li>
-        <li><strong>Alamat:</strong> Jl. Sidoharjo 1, Desa Negara Ratu, Kecamatan Natar, Kabupaten Lampung Selatan, Lampung</li>
-        <li><strong>Jam Belajar:</strong> Senin – Jumat, 08.00 – 15.00 WIB</li>
-      </ul>
-    </section>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>PT Arima Bangkit Persada</strong> · LPKS Arima Persada · NIB 1205260065173
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Beranda</a>
+      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
+    </div>
   </div>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="foot-left">
-        <strong>PT Arima Bangkit Persada</strong> · LPKS Arima Persada · NIB 1205260065173
-      </div>
-      <div class="foot-right">
-        <a href="index.html">Beranda</a>
-        <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
-        <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
-      </div>
-    </div>
-  </footer>
-</main>
-
-<script>
-  const sidebar = document.getElementById('sidebar');
-  const backdrop = document.getElementById('backdrop');
-  const menuToggle = document.getElementById('menuToggle');
-  function closeSidebar(){
-    sidebar.classList.remove('open');
-    backdrop.classList.remove('show');
-    document.body.style.overflow='';
-  }
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    backdrop.classList.toggle('show');
-    document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
-  });
-  backdrop.addEventListener('click', closeSidebar);
-  document.querySelectorAll('.sidebar-nav a, .back-link').forEach(a => {
-    a.addEventListener('click', closeSidebar);
-  });
-
-  const sections = document.querySelectorAll('.policy-section');
-  const navLinks = document.querySelectorAll('.sidebar-nav a');
-  function updateActive(){
-    let current = '';
-    sections.forEach(s => {
-      const rect = s.getBoundingClientRect();
-      if (rect.top <= 180) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  }
-  window.addEventListener('scroll', updateActive, { passive: true });
-  updateActive();
-</script>
+</footer>
 
 </body>
 </html>
