@@ -43,13 +43,17 @@
     display:flex;align-items:center;gap:12px;padding:8px;
     margin-bottom:32px;
   }
+  
+  /* LOGO SVG */
   .brand-mark{
-    width:40px;height:40px;flex-shrink:0;
+    width:42px;height:42px;flex-shrink:0;
     display:grid;place-items:center;
   }
-  .brand-mark img {
-    width: 100%; height: 100%; object-fit: contain;
+  .brand-mark svg {
+    width: 100%; height: 100%; border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(217,4,41,0.2);
   }
+
   .brand-info{display:flex;flex-direction:column;min-width:0}
   .brand-info strong{font-size:.92rem;font-weight:700;letter-spacing:-.01em}
   .brand-info small{font-size:.68rem;color:var(--muted);letter-spacing:.02em;margin-top:2px}
@@ -105,7 +109,7 @@
   .mobile-bar .brand-mini{
     display:flex;align-items:center;gap:10px;font-weight:700;font-size:.92rem;
   }
-  .mobile-bar .brand-mini img{width:30px;height:30px;object-fit:contain}
+  .mobile-bar .brand-mini .brand-mark { width: 32px; height: 32px; }
   .menu-toggle{
     background:none;border:none;color:var(--text);cursor:pointer;padding:8px;
   }
@@ -276,14 +280,7 @@
     font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;
     margin-top:16px;
   }
-  .biaya-note{
-    margin-top:32px;padding:20px 24px;
-    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
-    border-radius:14px;font-size:.85rem;color:rgba(255,255,255,.75);
-    display:flex;gap:12px;align-items:flex-start;
-  }
-  .biaya-note svg{flex-shrink:0;color:var(--gold);margin-top:2px}
-
+  
   /* ============ FASILITAS ============ */
   .fasilitas-grid{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -330,7 +327,7 @@
 
   /* ============ TENTANG ============ */
   .tentang-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-  .tentang-stats{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .tentang-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .tentang-stat{padding:24px;background:#fff;border-radius:16px;border:1px solid var(--border)}
   .tentang-stat .num{font-size:2.4rem;font-weight:700;letter-spacing:-.03em;color:var(--dark);line-height:1}
   .tentang-stat .num span{color:var(--gold)}
@@ -389,27 +386,24 @@
   .kontak-sosmed a .arrow{margin-left:auto;color:var(--muted);transition:transform .2s}
   .kontak-sosmed a:hover .arrow{transform:translateX(4px);color:var(--gold)}
 
-  .kontak-form{background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px}
-  .kontak-form h3{font-size:1.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
-  .kontak-form > p{font-size:.88rem;color:var(--muted);margin-bottom:28px}
-  .form-field{margin-bottom:16px}
-  .form-field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:8px}
-  .form-field input,.form-field select,.form-field textarea{
-    width:100%;padding:14px 16px;border-radius:12px;
-    border:1px solid var(--border);background:var(--bg);
-    font-family:inherit;font-size:.92rem;color:var(--text);transition:all .2s;
+  /* CTA Box in Kontak */
+  .kontak-cta-box {
+    background: #fff; border: 1px solid var(--border); border-radius: 20px;
+    padding: 40px; display: flex; flex-direction: column; justify-content: center;
+    align-items: flex-start; position: relative; overflow: hidden;
   }
-  .form-field input:focus,.form-field select:focus,.form-field textarea:focus{
-    outline:none;border-color:var(--gold);background:#fff;
-    box-shadow:0 0 0 4px rgba(201,162,74,.1);
+  .kontak-cta-box::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--dark), var(--gold));
   }
-  .form-field textarea{resize:vertical;min-height:80px}
-  .form-submit{
-    width:100%;padding:14px;border-radius:12px;border:none;
-    background:var(--dark);color:#fff;font-weight:600;font-size:.95rem;
-    cursor:pointer;font-family:inherit;transition:all .2s;margin-top:8px;
+  .kontak-cta-box h3{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2;}
+  .kontak-cta-box p{font-size:1rem;color:var(--muted);margin-bottom:32px;line-height:1.7;}
+  .kontak-cta-box .btn-cta {
+    display: inline-flex; align-items: center; justify-content: center; width: 100%;
+    gap: 10px; padding: 16px 24px; border-radius: 12px; background: var(--dark);
+    color: #fff; font-weight: 600; font-size: 1.05rem; transition: all .3s var(--ease);
   }
-  .form-submit:hover{background:var(--dark-2)}
+  .kontak-cta-box .btn-cta:hover { background: var(--dark-2); transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(11,23,48,.5); }
 
   /* ============ FOOTER ============ */
   footer{padding:40px 64px 40px;border-top:1px solid var(--border);background:#fff}
@@ -448,7 +442,7 @@
   }
   @media(max-width:520px){
     .biaya-grid{border-radius:16px}
-    .kontak-form{padding:24px}
+    .kontak-cta-box{padding:24px}
     .faq-item summary{padding:20px 20px;font-size:.92rem}
     .faq-item p{padding:0 20px 20px}
   }
@@ -459,7 +453,12 @@
 <!-- Mobile top bar -->
 <header class="mobile-bar">
   <a href="#" class="brand-mini">
-    <img src="logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%230b1730\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+    <div class="brand-mark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="20" fill="#D90429"/>
+        <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text>
+      </svg>
+    </div>
     <div>Arima Persada</div>
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -475,7 +474,10 @@
 <aside class="sidebar" id="sidebar">
   <a href="#" class="sidebar-brand">
     <div class="brand-mark">
-      <img src="logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%230b1730\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="20" fill="#D90429"/>
+        <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text>
+      </svg>
     </div>
     <div class="brand-info">
       <strong>Arima Persada</strong>
@@ -511,7 +513,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
       </a>
     </div>
-    <div class="hours">Senin–Sabtu · 08.00–17.00 WIB</div>
+    <div class="hours">Jam Belajar: Senin – Jumat · 08.00 – 15.00 WIB</div>
   </div>
 </aside>
 
@@ -651,16 +653,6 @@
           </div>
         </div>
       </div>
-
-      <div class="biaya-note reveal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
-        </svg>
-        <div>
-          <strong style="color:#fff">Dana talang tersedia, namun tidak direkomendasikan.</strong>
-          Kami sarankan perencanaan keuangan yang matang agar tidak menambah beban di kemudian hari.
-        </div>
-      </div>
     </div>
   </section>
 
@@ -768,6 +760,10 @@
             <div class="lbl">Tahun berdiri</div>
           </div>
           <div class="tentang-stat">
+            <div class="num">300<span>+</span></div>
+            <div class="lbl">Siswa ke Jepang</div>
+          </div>
+          <div class="tentang-stat">
             <div class="num">60<span>+</span></div>
             <div class="lbl">Angkatan</div>
           </div>
@@ -775,7 +771,7 @@
             <div class="num">1<span>:</span>12</div>
             <div class="lbl">Rasio instruktur</div>
           </div>
-          <div class="tentang-stat">
+          <div class="tentang-stat" style="grid-column: span 2;">
             <div class="num">3<span> bln</span></div>
             <div class="lbl">Durasi belajar</div>
           </div>
@@ -831,11 +827,11 @@
         <div class="kontak-info reveal">
           <span class="kicker">Kontak</span>
           <h2 class="section-h2">Mari berbincang.</h2>
-          <p>Hubungi kami melalui sosial media resmi atau isi formulir di samping. Tim kami akan merespons dalam 1×24 jam hari kerja.</p>
+          <p>Hubungi kami melalui sosial media resmi atau ikuti Kuis Karier di samping. Tim kami akan merespons dalam 1×24 jam hari kerja.</p>
 
           <div class="kontak-hours">
-            <h4>Jam Operasional</h4>
-            <p>Senin – Sabtu · 08.00 – 17.00 WIB</p>
+            <h4>Jam Belajar</h4>
+            <p>Senin – Jumat · 08.00 – 15.00 WIB</p>
           </div>
           <div class="kontak-hours">
             <h4>Alamat</h4>
@@ -870,37 +866,20 @@
           </div>
         </div>
 
-        <form class="kontak-form reveal" onsubmit="window.location.href='https://arima-lp.vercel.app';return false;">
-          <h3>Formulir Pendaftaran</h3>
-          <p>Isi data berikut, lalu lanjutkan ke Kuis Karier untuk proses seleksi.</p>
-          <div class="form-field">
-            <label>Nama Lengkap</label>
-            <input type="text" placeholder="Nama Anda" required>
-          </div>
-          <div class="form-field">
-            <label>Nomor WhatsApp</label>
-            <input type="tel" placeholder="08xxxxxxxxxx" required>
-          </div>
-          <div class="form-field">
-            <label>Program yang Diminati</label>
-            <select required>
-              <option value="">Pilih program</option>
-              <option>Magang / Ikusei Shuro</option>
-              <option>Tokutei Ginou (SSW)</option>
-              <option>Engineer / Gijinkoku</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>Pesan (opsional)</label>
-            <textarea placeholder="Pertanyaan atau kebutuhan Anda..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Lanjut ke Kuis Karier</button>
-        </form>
+        <!-- CTA BOX GANTI FORMULIR -->
+        <div class="kontak-cta-box reveal">
+          <h3>Siap Memulai Karier Anda?</h3>
+          <p>Temukan jalur yang paling tepat untuk Anda dengan mengikuti Kuis Karier singkat. Proses seleksi dan konsultasi dilakukan sepenuhnya melalui platform tersebut.</p>
+          <a href="https://arima-lp.vercel.app" target="_blank" rel="noopener" class="btn-cta">
+            Mulai Kuis Karier Sekarang
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA BOTTOM -->
   <section class="cta" style="background:var(--dark);color:#fff;text-align:center;padding:100px 24px;">
     <div style="max-width:640px;margin:0 auto;">
       <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;margin-bottom:20px;">Siap memulai perjalanan karier Anda?</h2>
