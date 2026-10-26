@@ -28,7 +28,7 @@
     z-index:100;overflow-y:auto}
   .sidebar-brand{display:flex;align-items:center;gap:12px;padding:8px;margin-bottom:32px}
   .brand-mark{width:40px;height:40px;flex-shrink:0;display:grid;place-items:center}
-  .brand-mark img{width:100%;height:100%;object-fit:contain}
+  .brand-mark svg{width:100%;height:100%;border-radius:10px;box-shadow:0 4px 12px rgba(217,4,41,0.2)}
   .brand-info strong{font-size:.92rem;font-weight:700;display:block}
   .brand-info small{font-size:.68rem;color:var(--muted);margin-top:2px;display:block}
 
@@ -116,7 +116,9 @@
 
 <header class="mobile-bar">
   <a href="index.html" class="brand-mini">
-    <div class="brand-mark"><img src="logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%230b1730\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'"></div>
+    <div class="brand-mark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#D90429"/><text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text></svg>
+    </div>
     <div>Arima Persada</div>
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -128,7 +130,9 @@
 
 <aside class="sidebar" id="sidebar">
   <a href="index.html" class="sidebar-brand">
-    <div class="brand-mark"><img src="logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%230b1730\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'"></div>
+    <div class="brand-mark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#D90429"/><text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text></svg>
+    </div>
     <div class="brand-info">
       <strong>Arima Persada</strong>
       <small>LPKS Resmi · NIB 1205260065173</small>
@@ -255,7 +259,7 @@
         <li><strong>Email:</strong> <a href="mailto:arimapersada@gmail.com">arimapersada@gmail.com</a></li>
         <li><strong>Telepon/WhatsApp:</strong> 082375128230</li>
         <li><strong>Alamat:</strong> Jl. Sidoharjo 1, Desa Negara Ratu, Kecamatan Natar, Kabupaten Lampung Selatan, Lampung</li>
-        <li><strong>Jam operasional:</strong> Senin – Sabtu, 08.00 – 17.00 WIB</li>
+        <li><strong>Jam Belajar:</strong> Senin – Jumat, 08.00 – 15.00 WIB</li>
       </ul>
     </section>
   </div>
