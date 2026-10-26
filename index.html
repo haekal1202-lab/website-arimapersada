@@ -45,8 +45,11 @@
     margin-bottom:32px;
   }
   
-  /* FIX LOGO INLINE SVG */
-  .brand-mark{width:42px;height:42px;flex-shrink:0;display:grid;place-items:center;}
+  /* FIX LOGO: IMG dengan Fallback SVG */
+  .brand-mark{
+    width:42px;height:42px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
 
   .brand-info{display:flex;flex-direction:column;min-width:0}
   .brand-info strong{font-size:.92rem;font-weight:700;letter-spacing:-.01em}
@@ -122,7 +125,7 @@
 
   .container{max-width:1000px;margin:0 auto}
 
-  /* Typography (Eikra Style) */
+  /* Typography */
   .kicker{
     display:inline-block;font-size:.72rem;font-weight:700;
     letter-spacing:.15em;text-transform:uppercase;color:var(--gold);
@@ -197,7 +200,7 @@
   .program-card{
     background:#fff;border:1px solid var(--border);border-radius:24px;
     padding:40px;transition:all .4s var(--ease);
-    box-shadow:0 4px 20px -10px rgba(0,0,0,0.05); /* Eikra Soft Shadow */
+    box-shadow:0 4px 20px -10px rgba(0,0,0,0.05);
   }
   .program-card:hover{
     transform:translateY(-8px);box-shadow:0 20px 40px -20px rgba(11,23,48,.15);
@@ -473,7 +476,9 @@
 <header class="mobile-bar">
   <a href="#" class="brand-mini">
     <div class="brand-mark">
-      <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(217,4,41,0.2);">
+      <!-- SISTEM FALLBACK LOGO -->
+      <img src="logo.png" alt="Logo" style="width:100%; height:100%; object-fit:contain; border-radius:8px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; border-radius:8px; box-shadow: 0 4px 12px rgba(217,4,41,0.2);">
         <rect width="100" height="100" rx="20" fill="#D90429"/>
         <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text>
       </svg>
@@ -493,7 +498,9 @@
 <aside class="sidebar" id="sidebar">
   <a href="#" class="sidebar-brand">
     <div class="brand-mark">
-      <svg width="42" height="42" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(217,4,41,0.2);">
+      <!-- SISTEM FALLBACK LOGO -->
+      <img src="logo.png" alt="Logo" style="width:100%; height:100%; object-fit:contain; border-radius:10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; border-radius:10px; box-shadow: 0 4px 12px rgba(217,4,41,0.2);">
         <rect width="100" height="100" rx="20" fill="#D90429"/>
         <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle" letter-spacing="-2">AP</text>
       </svg>
