@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff; --text: #1a1a1a; --text-muted: #666666;
+    --bg: #ffffff; --text: #1a1a1a; --text-muted: #555555;
     --navy: #0a1327; --gold: #c9a24a; --border: rgba(0,0,0,0.08);
     --font-serif: 'Playfair Display', serif; --font-sans: 'Inter', sans-serif;
   }
@@ -17,25 +17,19 @@
   body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
   a { text-decoration: none; color: inherit; }
 
-  .navbar {
-    position: fixed; top: 0; left: 0; right: 0; height: 80px;
-    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border); z-index: 1000;
-    display: flex; align-items: center;
-  }
-  .nav-inner {
-    max-width: 1000px; width: 100%; margin: 0 auto; padding: 0 32px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
+  .navbar { position: fixed; top: 0; left: 0; right: 0; height: 80px;
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border); z-index: 1000; display: flex; align-items: center; }
+  .nav-inner { max-width: 1000px; width: 100%; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; }
   .brand { display: flex; align-items: center; gap: 12px; }
   .logo-box { width: 36px; height: 36px; }
-  .brand-text { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; color: var(--text); }
+  .brand-text { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); }
   .nav-cta { padding: 10px 24px; border-radius: 99px; background: var(--navy); color: #fff; font-size: 0.85rem; font-weight: 500; transition: all 0.3s; }
   .nav-cta:hover { background: transparent; color: var(--navy); border: 1px solid var(--navy); }
 
   .page-header { padding: 160px 32px 80px; max-width: 800px; margin: 0 auto; text-align: center; }
   .kicker { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-  .page-h1 { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; line-height: 1.1; margin-bottom: 24px; }
+  .page-h1 { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; line-height: 1.1; margin-bottom: 24px; color: var(--navy); }
   .page-sub { font-size: 1.1rem; color: var(--text-muted); }
   .page-meta { font-size: 0.85rem; color: var(--text-muted); margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
   .page-meta strong { color: var(--text); }
@@ -43,8 +37,8 @@
   .page-body { padding: 0 32px 120px; max-width: 800px; margin: 0 auto; }
   .policy-section { padding: 40px 0; border-bottom: 1px solid var(--border); }
   .policy-section:last-child { border-bottom: none; }
-  .policy-section h2 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 20px; color: var(--text); }
-  .policy-section h3 { font-size: 1.05rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px; }
+  .policy-section h2 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 20px; color: var(--navy); }
+  .policy-section h3 { font-size: 1.05rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: var(--navy); }
   .policy-section p { margin-bottom: 16px; color: var(--text-muted); font-size: 0.98rem; }
   .policy-section ul { padding-left: 20px; margin-bottom: 16px; }
   .policy-section li { margin-bottom: 10px; color: var(--text-muted); font-size: 0.95rem; }
