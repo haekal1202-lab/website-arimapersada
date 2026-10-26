@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="LPKS Arima Persada — Pelatihan bahasa Jepang dan keahlian untuk karier di Jepang. Sejak 2006, 60 angkatan. NIB 1205260065173." />
+<meta name="description" content="LPKS Arima Persada — Pelatihan bahasa Jepang dan keahlian untuk karier di Jepang. Sejak 2006, 300+ alumni. NIB 1205260065173." />
 <title>LPKS Arima Persada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
     background:#fff;border-right:1px solid var(--border);
     padding:28px 20px;display:flex;flex-direction:column;
     z-index:100;overflow-y:auto;
-    box-shadow:4px 0 24px -10px rgba(0,0,0,0.03); /* Eikra soft shadow */
+    box-shadow:4px 0 24px -10px rgba(0,0,0,0.03);
   }
   .sidebar-brand{
     display:flex;align-items:center;gap:12px;padding:8px;
@@ -134,7 +134,7 @@
     margin-bottom:28px;
   }
   .section-h2{
-    font-family:'Playfair Display',serif; /* Eikra Editorial Font */
+    font-family:'Playfair Display',serif;
     font-size:clamp(2rem,4.5vw,3.5rem);font-weight:600;
     letter-spacing:-.02em;line-height:1.1;margin-bottom:20px;
   }
@@ -234,6 +234,8 @@
     overflow: hidden;
     aspect-ratio: 4/3;
     background: var(--bg-alt);
+    position: relative;
+    cursor: pointer;
   }
   .galeri-item img {
     width: 100%; height: 100%; object-fit: cover;
@@ -242,6 +244,14 @@
   .galeri-item:hover img {
     transform: scale(1.05);
   }
+  .galeri-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 24px 16px 16px;
+    background: linear-gradient(to top, rgba(11,23,48,0.9), transparent);
+    color: #fff; font-size: 0.85rem; font-weight: 600;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .galeri-item:hover .galeri-caption { opacity: 1; }
 
   /* ============ BIAYA (DARK) ============ */
   .biaya{
@@ -330,7 +340,7 @@
   .tentang-stat .lbl{font-size:.82rem;color:var(--muted);margin-top:8px}
   .tentang-text p{font-size:1rem;color:var(--muted);line-height:1.7;margin-bottom:16px}
 
-  /* ============ TESTIMONI (Eikra Style) ============ */
+  /* ============ TESTIMONI ============ */
   .testimoni{background:var(--bg-alt)}
   .testi-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;}
   .testi-card{background:#fff;border-radius:24px;padding:40px;border:1px solid var(--border);box-shadow:0 4px 20px -10px rgba(0,0,0,0.05);}
@@ -405,7 +415,7 @@
     content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
     background: linear-gradient(90deg, var(--dark), var(--gold));
   }
-  .kontak-cta-box h3{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2;font-family:'Playfair Display',serif;}
+  .kontak-cta-box h3{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2;font-family:'Inter',sans-serif;font-weight:800;}
   .kontak-cta-box p{font-size:1rem;color:var(--muted);margin-bottom:32px;line-height:1.7;}
   .kontak-cta-box .btn-cta {
     display: inline-flex; align-items: center; justify-content: center; width: 100%;
@@ -547,16 +557,16 @@
 
       <div class="hero-stats reveal">
         <div class="hero-stat">
+          <div class="num">300+</div>
+          <div class="lbl">Siswa ke Jepang</div>
+        </div>
+        <div class="hero-stat">
           <div class="num">60+</div>
           <div class="lbl">Angkatan sejak 2006</div>
         </div>
         <div class="hero-stat">
           <div class="num">1:12</div>
           <div class="lbl">Rasio instruktur terhadap peserta</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">3 bln</div>
-          <div class="lbl">Durasi pelatihan intensif</div>
         </div>
       </div>
     </div>
@@ -618,12 +628,30 @@
         Fasilitas asrama dan ruang pelatihan yang dirancang untuk mendukung pembiasaan bahasa dan budaya kerja Jepang.
       </p>
       <div class="galeri-grid reveal">
-        <div class="galeri-item"><img src="foto-asrama.jpeg" alt="Asrama"></div>
-        <div class="galeri-item"><img src="foto-dapur-asrama-2.jpeg" alt="Dapur Asrama"></div>
-        <div class="galeri-item"><img src="Kegiatan-belajar.jpeg" alt="Ruang Kelas"></div>
-        <div class="galeri-item"><img src="Foto-latihan-fisik.jpeg" alt="Latihan Fisik"></div>
-        <div class="galeri-item"><img src="keberangkatan-siswa.jpeg" alt="Keberangkatan"></div>
-        <div class="galeri-item"><img src="Foto-keberangkatan-siswa-2.jpeg" alt="Keberangkatan 2"></div>
+        <div class="galeri-item">
+          <img src="foto-asrama.jpeg" alt="Kamar Asrama">
+          <div class="galeri-caption">Kamar Asrama (Japanese Zone)</div>
+        </div>
+        <div class="galeri-item">
+          <img src="foto-dapur-asrama-2.jpeg" alt="Dapur Asrama">
+          <div class="galeri-caption">Dapur & Ruang Makan Bersama</div>
+        </div>
+        <div class="galeri-item">
+          <img src="Kegiatan-belajar.jpeg" alt="Ruang Kelas">
+          <div class="galeri-caption">Kelas Bahasa Jepang Intensif</div>
+        </div>
+        <div class="galeri-item">
+          <img src="Foto-latihan-fisik.jpeg" alt="Latihan Fisik">
+          <div class="galeri-caption">Pembentukan Fisik & Mental (FMD)</div>
+        </div>
+        <div class="galeri-item">
+          <img src="keberangkatan-siswa.jpeg" alt="Keberangkatan">
+          <div class="galeri-caption">Keberangkatan Alumni ke Jepang</div>
+        </div>
+        <div class="galeri-item">
+          <img src="Foto-keberangkatan-siswa-2.jpeg" alt="Keberangkatan 2">
+          <div class="galeri-caption">Momen Pelepasan Siswa</div>
+        </div>
       </div>
     </div>
   </section>
@@ -790,7 +818,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONI (EIKRA STYLE) -->
+  <!-- TESTIMONI -->
   <section class="testimoni" id="testimoni">
     <div class="container">
       <div style="text-align: center; margin-bottom: 64px;">
@@ -812,7 +840,7 @@
             <div class="testi-avatar">R</div>
             <div class="testi-info">
               <strong>Rina A.</strong>
-              <span>Alumni Angkatan 2022 · Caregiver</span>
+              <span>Alumni Angkatan 2022 · Caregiver (Aichi)</span>
             </div>
           </div>
         </div>
@@ -830,7 +858,7 @@
             <div class="testi-avatar">B</div>
             <div class="testi-info">
               <strong>Budi S.</strong>
-              <span>Alumni Angkatan 2023 · Manufaktur</span>
+              <span>Alumni Angkatan 2023 · Manufaktur (Osaka)</span>
             </div>
           </div>
         </div>
@@ -926,7 +954,7 @@
 
         <!-- CTA BOX GANTI FORMULIR -->
         <div class="kontak-cta-box reveal">
-          <h3 style="font-family:'Inter',sans-serif; font-weight:800;">Siap Memulai Karier Anda?</h3>
+          <h3>Siap Memulai Karier Anda?</h3>
           <p>Temukan jalur yang paling tepat untuk Anda dengan mengikuti Kuis Karier singkat. Proses seleksi dan konsultasi dilakukan sepenuhnya melalui platform tersebut.</p>
           <a href="https://arima-lp.vercel.app" target="_blank" rel="noopener" class="btn-cta">
             Mulai Kuis Karier Sekarang
