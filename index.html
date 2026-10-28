@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pusat Informasi LPKS Arima Persada - Program Pelatihan Bahasa Jepang dan Penempatan Kerja Terpercaya.">
-    <title>LPKS Arima Persada — Pusat Informasi Resmi</title>
+    <meta name="description" content="Pusat Informasi & Edukasi LPKS Arima Persada. Menjembatani Kompetensi, Membuka Gerbang Karier ke Jepang.">
+    <title>LPKS Arima Persada — Pusat Informasi & Edukasi</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
         :root {
             --bg-main: #0a0a0a;
             --bg-surface: #121212;
-            --bg-card: #1a1a1a;
+            --bg-card: #181818;
             --text-main: #f5f5f5;
             --text-muted: #a0a0a0;
             --gold: #d4af37;
@@ -61,7 +61,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 10, 10, 0.7);
+            background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
@@ -76,11 +76,11 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 25px;
         }
 
         .nav-links a {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-muted);
             transition: color 0.3s;
@@ -107,9 +107,9 @@
             background: transparent;
             color: var(--gold);
             border: 1px solid var(--gold);
-            padding: 10px 24px;
+            padding: 8px 20px;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.4s ease;
@@ -134,13 +134,13 @@
         .hero-bg {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('Foto-keberangkatan-siswa.jpeg');
+            background-image: url('foto bersama siswa hitam 2.jpeg'); /* Ganti gambar sesuai request */
             background-size: cover;
             background-position: center;
-            opacity: 0.2;
+            opacity: 0.25;
             z-index: 1;
-            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
         }
 
         .hero-content {
@@ -220,146 +220,363 @@
             font-size: 1.05rem;
         }
 
-        /* --- STATS --- */
-        .stats-grid {
+        /* --- TENTANG KAMI & LEGALITAS --- */
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1100px;
             margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .director-quote {
+            font-style: italic;
+            border-left: 2px solid var(--gold);
+            padding-left: 20px;
+            margin-top: 30px;
+            color: var(--text-main);
+        }
+        
+        .director-name {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .legal-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .legal-card h3 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .legal-list {
+            list-style: none;
+        }
+
+        .legal-list li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 10px;
+        }
+
+        .legal-list li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* --- VISI MISI --- */
+        .visi-misi-section {
+            background-color: var(--bg-surface);
             text-align: center;
         }
 
-        .stat-item {
-            padding: 30px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            transition: transform 0.3s;
+        .visi-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            position: relative;
         }
 
-        .stat-item:hover {
+        .visi-box::before {
+            content: '“';
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--gold);
+            position: absolute;
+            top: -20px; left: 20px;
+            opacity: 0.2;
+        }
+
+        .visi-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .visi-box p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        .misi-list {
+            text-align: left;
+            display: grid;
+            gap: 15px;
+        }
+
+        .misi-item {
+            background: var(--bg-main);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--gold);
+            font-size: 0.95rem;
+        }
+
+        /* --- KEUNGGULAN --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.4s;
+        }
+
+        .feature-card:hover {
             transform: translateY(-5px);
             border-color: var(--gold);
+            box-shadow: 0 10px 30px var(--gold-glow);
         }
 
-        .stat-item h3 {
-            font-size: 3rem;
+        .feature-card h4 {
+            font-size: 1.2rem;
             color: var(--gold);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .stat-item p {
+        .feature-card p {
             font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            color: var(--text-muted);
         }
 
-        /* --- PROGRAM SECTION --- */
+        /* --- EDUKASI BUDAYA (5S & HOURENSOU) --- */
+        .edu-section {
+            background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-surface) 100%);
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .edu-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .edu-box h3 {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .edu-box p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .edu-list {
+            list-style: none;
+        }
+
+        .edu-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .edu-list li::before {
+            content: '•';
+            color: var(--gold);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0; top: -6px;
+        }
+
+        .edu-list strong {
+            color: var(--text-main);
+        }
+
+        /* --- PROGRAM & KURIKULUM --- */
         .program-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .program-card {
-            background: var(--bg-card);
+            background: var(--bg-surface);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 40px 30px;
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .program-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 4px;
-            background: var(--gold);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s;
-        }
-
-        .program-card:hover::before {
-            transform: scaleX(1);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
         }
 
         .program-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: var(--gold);
         }
 
         .program-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 15px;
             color: var(--gold);
+            margin-bottom: 10px;
         }
 
-        .program-card p {
-            font-size: 0.95rem;
+        .program-card .subtitle {
+            font-size: 0.85rem;
             color: var(--text-muted);
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* --- CURRICULUM (Tabel Data) --- */
-        .curriculum-section {
-            background: var(--bg-surface);
+        .program-details {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
         }
 
-        .curriculum-grid {
+        .program-details li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+        }
+
+        .program-details li span:last-child {
+            color: var(--text-main);
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .program-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* --- EDUKASI SEKTOR --- */
+        .sector-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
             max-width: 1000px;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .curr-item {
-            background: var(--bg-main);
-            border: 1px solid var(--border-color);
+        .sector-item {
+            background: var(--bg-card);
+            padding: 20px 10px;
             border-radius: 8px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
         }
 
-        .curr-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 15px;
-            margin-bottom: 15px;
+        .sector-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
         }
 
-        .curr-header h4 {
+        .sector-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .sector-item h4 {
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* --- ALUR (Timeline) --- */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 20px;
+            width: 2px; height: 100%;
+            background: rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 14px; top: 5px;
+            width: 14px; height: 14px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--gold);
+        }
+
+        .timeline-item h4 {
             font-size: 1.2rem;
-            color: var(--gold);
+            color: var(--text-main);
+            margin-bottom: 5px;
         }
 
-        .curr-list {
-            list-style: none;
+        .timeline-item p {
             font-size: 0.9rem;
             color: var(--text-muted);
         }
 
-        .curr-list li {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .curr-list li span {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        /* --- GALLERY (Fasilitas & Kegiatan) --- */
+        /* --- SARANA PRASARANA (Galeri) --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -373,7 +590,6 @@
             border-radius: 8px;
             overflow: hidden;
             aspect-ratio: 4/3;
-            cursor: pointer;
         }
 
         .gallery-item img {
@@ -384,7 +600,7 @@
         }
 
         .gallery-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .gallery-overlay {
@@ -395,52 +611,23 @@
             color: #fff;
             font-size: 0.9rem;
             font-weight: 500;
-            opacity: 0;
-            transition: opacity 0.3s;
         }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* --- INVESTASI (Tanpa Harga) --- */
-        .investasi-section {
-            background: linear-gradient(180deg, var(--bg-main) 0%, #0d0d0d 100%);
-        }
-        
-        .investasi-box {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border: 1px solid var(--gold);
-            border-radius: 16px;
-            padding: 60px 40px;
+        /* --- KEMITRAAN --- */
+        .partnership-section {
             text-align: center;
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.05);
+            background-color: var(--bg-surface);
         }
 
-        .investasi-box h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .investasi-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-            text-align: left;
+        .partnership-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .inv-feat h4 {
-            color: var(--gold);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .inv-feat p {
-            font-size: 0.9rem;
+        .partnership-content p {
             color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
         }
 
         /* --- FAQ --- */
@@ -485,6 +672,27 @@
             color: var(--gold);
         }
 
+        /* --- BOTTOM CTA --- */
+        .bottom-cta {
+            text-align: center;
+            padding: 100px 5%;
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--bg-main) 100%);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .bottom-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .bottom-cta p {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* --- FOOTER --- */
         footer {
             background: #050505;
@@ -494,7 +702,7 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto 40px;
@@ -508,6 +716,7 @@
         .footer-brand p {
             color: var(--text-muted);
             font-size: 0.9rem;
+            max-width: 300px;
         }
 
         .footer-links h4 {
@@ -522,11 +731,12 @@
 
         .footer-links li {
             margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .footer-links a {
             color: var(--text-muted);
-            font-size: 0.9rem;
             transition: color 0.3s;
         }
 
@@ -555,13 +765,17 @@
         }
 
         /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .nav-links { display: none; } /* Sembunyikan menu di HP */
+        @media (max-width: 900px) {
+            .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand p { margin: 0 auto; }
             .hero h1 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
             .hero-content { text-align: center; }
             .hero p { margin-left: auto; margin-right: auto; }
-            .investasi-box { padding: 40px 20px; }
-            .investasi-features { text-align: center; }
         }
     </style>
 </head>
@@ -573,193 +787,331 @@
             <img src="logo.png" alt="Arima Logo" onerror="this.src='https://via.placeholder.com/150x50/d4af37/000000?text=ARIMA'">
         </div>
         <div class="nav-links">
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#edukasi">Edukasi Budaya</a>
             <a href="#program">Program</a>
-            <a href="#kurikulum">Kurikulum</a>
+            <a href="#alur">Alur</a>
             <a href="#fasilitas">Fasilitas</a>
-            <a href="#investasi">Investasi</a>
-            <a href="#faq">FAQ</a>
         </div>
-        <a href="https://arima-lp.vercel.app/chatbox.html" class="nav-cta">Mulai Kuis</a>
+        <a href="https://arima-lp.vercel.app/chatbox.html" class="nav-cta">Konsultasi</a>
     </nav>
 
     <!-- HERO SECTION -->
     <header class="hero">
+        <!-- Menggunakan gambar yang diminta -->
         <div class="hero-bg"></div>
         <div class="hero-content reveal">
             <span class="hero-tagline">LPKS Resmi Terdaftar • Sejak 2006</span>
-            <h1>Membangun Jembatan Menuju <br><span>Karier Gemilang</span> di Jepang.</h1>
-            <p>Lebih dari 300 alumni telah sukses bekerja di negeri Sakura. Kami memandu Anda dari nol hingga siap bersaing di industri global dengan kurikulum terstruktur dan fasilitas all-in.</p>
-            <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-primary">Temukan Jalur Karier Anda</a>
+            <h1>Menjembatani Kompetensi, <br>Membuka <span>Gerbang Karier</span> ke Jepang.</h1>
+            <p>Lembaga pelatihan kerja swasta yang berdedikasi mencetak tenaga kerja Indonesia yang kompeten, berkarakter kuat, dan berdaya saing global melalui pendidikan bahasa dan budaya kerja Jepang.</p>
+            <a href="#tentang" class="btn-primary">Jelajahi Profil Kami</a>
         </div>
     </header>
 
-    <!-- STATS SECTION -->
-    <section class="stats-section">
-        <div class="stats-grid reveal">
-            <div class="stat-item">
-                <h3>300+</h3>
-                <p>Siswa Berangkat</p>
+    <!-- TENTANG KAMI & LEGALITAS -->
+    <section id="tentang">
+        <div class="about-grid reveal">
+            <div class="about-text">
+                <h2>Pendidikan Karakter & Kompetensi</h2>
+                <p>LPKS Arima Persada (PT. Arima Bangkit Persada) hadir sebagai mitra terpercaya untuk mendidik, melatih, dan membentuk karakter calon tenaga kerja yang mandiri, kompeten, dan siap beradaptasi dengan budaya kerja Jepang.</p>
+                <p>Kami berfokus pada pembentukan karakter disiplin, penguasaan bahasa (Nihongo), serta pemahaman mendalam tentang etos kerja Jepang (Shigoto no Keiko).</p>
+                <div class="director-quote">
+                    "Melalui sistem pelatihan yang adaptif, kami berkomitmen memberikan standardisasi terbaik demi mencetak lulusan yang unggul, berdisiplin tinggi, dan siap disalurkan melalui jaringan mitra resmi terpercaya."
+                    <span class="director-name">— Suwardi, Direktur LPKS Arima Persada</span>
+                </div>
             </div>
-            <div class="stat-item">
-                <h3>60+</h3>
-                <p>Angkatan</p>
-            </div>
-            <div class="stat-item">
-                <h3>100%</h3>
-                <p>Pendampingan</p>
+            <div class="legal-card">
+                <h3>Legalitas Lembaga</h3>
+                <ul class="legal-list">
+                    <li>Nama Resmi: PT. Arima Bangkit Persada</li>
+                    <li>No. Sertifikat Kemnaker (Bisnis & Manajemen Swasta): 12052600651730003</li>
+                    <li>No. Sertifikat Kemnaker (Teknik Swasta): 12052600651730004</li>
+                    <li>Akta Pendirian No. 01 oleh Notaris Ghazali Agung, S.H, M.Kn.</li>
+                    <li>NPWP Lembaga: 1000 0000 0801 3169</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- PROGRAM SECTION -->
+    <!-- VISI & MISI -->
+    <section class="visi-misi-section">
+        <div class="visi-box reveal">
+            <h3>Visi Kami</h3>
+            <p>Menjadi lembaga pelatihan kerja ke Jepang yang unggul, tepercaya, dan profesional dalam mencetak tenaga kerja Indonesia yang kompeten, berkarakter kuat, serta berdaya saing global.</p>
+            
+            <h3 style="font-size: 1.4rem; margin-bottom: 15px; text-align: left;">Misi Kami</h3>
+            <div class="misi-list">
+                <div class="misi-item">Menyelenggarakan pelatihan bahasa Jepang yang efektif, komunikatif, dan berbasis kelulusan ujian resmi (JLPT/JFT-Basic).</div>
+                <div class="misi-item">Membentuk mental, fisik, dan disiplin (FMD) yang kuat sesuai standar etos kerja industri di Jepang.</div>
+                <div class="misi-item">Menyediakan pelatihan kompetensi multi-sektor yang fleksibel sesuai minat peserta dan kebutuhan pasar kerja Jepang.</div>
+                <div class="misi-item">Menjalin kemitraan strategis dengan SO resmi untuk menjamin proses keberangkatan siswa yang aman, transparan, dan legal.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section>
+        <div class="section-header reveal">
+            <h2>Keunggulan LPKS Arima</h2>
+            <p>Fasilitas dan sistem yang dirancang untuk mendukung kesuksesan Anda.</p>
+        </div>
+        <div class="feature-grid reveal">
+            <div class="feature-card">
+                <h4>Fasilitas Asrama Terintegrasi</h4>
+                <p>Peserta tinggal di asrama dengan lingkungan aman dan mendukung pembiasaan bahasa Jepang harian (Japanese Zone).</p>
+            </div>
+            <div class="feature-card">
+                <h4>Sinergi Kemitraan SO Resmi</h4>
+                <p>Proses pemberkasan dan penyaluran kerja terjamin aman karena bekerja sama dengan Sending Organization (SO) berizin Kemnaker.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Kurikulum Berorientasi Industri</h4>
+                <p>Materi pembelajaran difokuskan pada percakapan (Kaiwa), istilah teknis kerja spesifik, serta latihan ujian JFT/JLPT berbasis komputer (CBT).</p>
+            </div>
+            <div class="feature-card">
+                <h4>Pembinaan Karakter & Fisik</h4>
+                <p>Membentuk calon tenaga kerja yang tidak hanya pintar bahasa, tetapi juga berdisiplin tinggi, sopan (5S/Hourensou), dan tangguh di tempat kerja.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUKASI BUDAYA JEPANG -->
+    <section id="edukasi" class="edu-section">
+        <div class="section-header reveal">
+            <h2>Wawasan Budaya & Etos Kerja</h2>
+            <p>Bekal pengetahuan agar Anda tidak kaget saat tiba di Jepang.</p>
+        </div>
+        <div class="edu-grid reveal">
+            <div class="edu-box">
+                <h3>Prinsip 5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke)</h3>
+                <p>Budaya dasar kerja di Jepang yang menekankan kerapian dan efisiensi.</p>
+                <ul class="edu-list">
+                    <li><strong>Seiri (Ringkas):</strong> Memisahkan yang perlu dan tidak perlu.</li>
+                    <li><strong>Seiton (Rapi):</strong> Menyimpan barang di tempat yang tepat agar mudah dicari.</li>
+                    <li><strong>Seiso (Resik):</strong> Membersihkan lingkungan kerja dan mesin.</li>
+                    <li><strong>Seiketsu (Rawat)::</strong> Menjaga standar kebersihan secara konsisten.</li>
+                    <li><strong>Shitsuke (Rajin):</strong> Membiasakan disiplin dan mematuhi aturan.</li>
+                </ul>
+            </div>
+            <div class="edu-box">
+                <h3>Prinsip Hourensou (Pelaporan & Komunikasi)</h3>
+                <p>Sistem komunikasi krusial agar pekerjaan berjalan lancar tanpa kesalahpahaman.</p>
+                <ul class="edu-list">
+                    <li><strong>Houkoku (Melapor):</strong> Memberitahukan progres atau hasil pekerjaan kepada atasan.</li>
+                    <li><strong>Renraku (Menghubungi):</strong> Memberi tahu jika ada masalah atau perubahan situasi.</li>
+                    <li><strong>Soudan (Konsultasi):</strong> Berdiskusi dan meminta saran jika menemui kesulitan sebelum bertindak.</li>
+                </ul>
+                <p style="text-align: left; margin-top: 20px; font-size: 0.85rem;">*Kedua prinsip ini akan dilatih secara intensif selama di asrama Arima.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM & KURIKULUM -->
     <section id="program">
         <div class="section-header reveal">
-            <h2>Pilih Jalur Karier Anda</h2>
-            <p>Setiap impian memiliki jalannya sendiri. Kami menyediakan tiga program utama yang dirancang untuk berbagai latar belakang dan tujuan.</p>
+            <h2>Program Pelatihan & Kurikulum</h2>
+            <p>Transparansi kurikulum untuk memastikan kesiapan Anda menghadapi seleksi.</p>
         </div>
         <div class="program-grid reveal">
+            <!-- Basic -->
             <div class="program-card">
-                <h3>Magang (Ikusei Shuro)</h3>
-                <p>Jalur tercepat untuk merasakan bekerja di Jepang. Sangat cocok untuk pelajar, lulusan baru, atau yang ingin langsung mengasah keterampilan sambil belajar budaya kerja.</p>
+                <h3>Kelas BASIC</h3>
+                <span class="subtitle">Magang / Pemula</span>
+                <ul class="program-details">
+                    <li><span>Target Kelulusan</span> <span>Lulus A1</span></li>
+                    <li><span>Jumlah Pertemuan</span> <span>30 Kali</span></li>
+                    <li><span>Materi Belajar</span> <span>25 BAB</span></li>
+                    <li><span>Durasi Belajar</span> <span>2.5 Bulan</span></li>
+                    <li><span>Metode</span> <span>Online / Offline</span></li>
+                </ul>
+                <div>
+                    <span class="program-tag">Offline Pagi/Malam</span>
+                    <span class="program-tag">Online Malam</span>
+                </div>
             </div>
-            <div class="program-card">
-                <h3>Tokutei Ginou (SSW)</h3>
-                <p>Program pekerja terampil bersertifikasi. Memiliki prospek karier dan gaji yang lebih tinggi dengan durasi kerja hingga 5 tahun atau lebih. Butuh bahasa setara N4/A2.2.</p>
+            <!-- Reguler -->
+            <div class="program-card" style="border-color: var(--gold); box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);">
+                <h3>Kelas REGULER</h3>
+                <span class="subtitle">Magang / Tokutei Ginou</span>
+                <ul class="program-details">
+                    <li><span>Target Kelulusan</span> <span>A1 / A2.2 (JFT)</span></li>
+                    <li><span>Jumlah Pertemuan</span> <span>35 - 60 Kali</span></li>
+                    <li><span>Materi Belajar</span> <span>50 BAB</span></li>
+                    <li><span>Durasi Belajar</span> <span>3.75 - 5 Bulan</span></li>
+                    <li><span>Metode</span> <span>Online / Offline</span></li>
+                </ul>
+                <div>
+                    <span class="program-tag">Offline Pagi/Malam</span>
+                    <span class="program-tag">Online Malam</span>
+                </div>
             </div>
+            <!-- Corporate -->
             <div class="program-card">
-                <h3>Engineer (Professional)</h3>
-                <p>Dirancang khusus untuk lulusan D3/S1 (terutama IT & Teknik). Bekerja sebagai tenaga profesional dengan target penguasaan bahasa level N3.</p>
+                <h3>Kelas CORPORATE</h3>
+                <span class="subtitle">Tokutei Ginou (Karyawan)</span>
+                <ul class="program-details">
+                    <li><span>Target Kelulusan</span> <span>A2.2 (JFT)</span></li>
+                    <li><span>Jumlah Pertemuan</span> <span>30 Kali</span></li>
+                    <li><span>Materi Belajar</span> <span>50 BAB</span></li>
+                    <li><span>Durasi Belajar</span> <span>3.75 Bulan</span></li>
+                    <li><span>Metode</span> <span>Offline (Weekend)</span></li>
+                </ul>
+                <div>
+                    <span class="program-tag">Sabtu & Minggu</span>
+                </div>
+            </div>
+            <!-- Professional -->
+            <div class="program-card">
+                <h3>Kelas PROFESSIONAL</h3>
+                <span class="subtitle">Engineer (D3/S1)</span>
+                <ul class="program-details">
+                    <li><span>Target Kelulusan</span> <span>Lulus N3</span></li>
+                    <li><span>Jumlah Pertemuan</span> <span>50+ Kali</span></li>
+                    <li><span>Materi Belajar</span> <span>50 + Materi N3</span></li>
+                    <li><span>Durasi Belajar</span> <span>6 - 8 Bulan</span></li>
+                    <li><span>Metode</span> <span>Offline + Online</span></li>
+                </ul>
+                <div>
+                    <span class="program-tag">Senin - Jumat</span>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--gold);" class="reveal">
+            *Bebas Biaya Pendaftaran • Investasi Terjangkau • Skema Pembayaran Fleksibel
+        </div>
+    </section>
+
+    <!-- EDUKASI SEKTOR PEKERJAAN -->
+    <section class="visi-misi-section">
+        <div class="section-header reveal">
+            <h2>Sektor Pekerjaan di Jepang</h2>
+            <p>Peluang luas di berbagai industri yang sedang berkembang pesat.</p>
+        </div>
+        <div class="sector-grid reveal">
+            <div class="sector-item">
+                <div class="sector-icon">🧑‍🦳</div>
+                <h4>Perawatan Lansia (Kaigo)</h4>
+            </div>
+            <div class="sector-item">
+                <div class="sector-icon">🏭</div>
+                <h4>Manufaktur</h4>
+            </div>
+            <div class="sector-item">
+                <div class="sector-icon">🍽️</div>
+                <h4>Pengolahan Makanan</h4>
+            </div>
+            <div class="sector-item">
+                <div class="sector-icon">🏗️</div>
+                <h4>Konstruksi</h4>
+            </div>
+            <div class="sector-item">
+                <div class="sector-icon">🚜</div>
+                <h4>Pertanian</h4>
+            </div>
+            <div class="sector-item">
+                <div class="sector-icon">👨‍💻</div>
+                <h4>IT & Engineering</h4>
             </div>
         </div>
     </section>
 
-    <!-- CURRICULUM SECTION (Data Tabel) -->
-    <section id="kurikulum" class="curriculum-section">
+    <!-- ALUR PELATIHAN -->
+    <section id="alur">
         <div class="section-header reveal">
-            <h2>Kurikulum Terukur & Intensif</h2>
-            <p>Kami tidak hanya menjanjikan kelulusan. Kami menyusun setiap pertemuan dan modul BAB untuk memastikan Anda siap menghadapi ujian sertifikasi.</p>
+            <h2>Alur Pelatihan Hingga Keberangkatan</h2>
+            <p>Proses yang sistematis dan legal dari awal hingga Anda tiba di Jepang.</p>
         </div>
-        <div class="curriculum-grid reveal">
-            <div class="curr-item">
-                <div class="curr-header">
-                    <h4>Kelas BASIC</h4>
-                </div>
-                <ul class="curr-list">
-                    <li>Target Kelulusan: <span>Lulus A1</span></li>
-                    <li>Jumlah Pertemuan: <span>30 Kali</span></li>
-                    <li>Jumlah Materi: <span>25 BAB</span></li>
-                    <li>Durasi: <span>2.5 Bulan</span></li>
-                </ul>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <h4>1. Pendaftaran, MCU & Orientasi</h4>
+                <p>Tes seleksi masuk, pemeriksaan kesehatan (Medical Check Up), dan pengenalan program.</p>
             </div>
-            <div class="curr-item" style="border-color: rgba(212, 175, 55, 0.4);">
-                <div class="curr-header">
-                    <h4>Kelas REGULER</h4>
-                </div>
-                <ul class="curr-list">
-                    <li>Target Kelulusan: <span>Lulus A2.2 / Persiapan JFT</span></li>
-                    <li>Jumlah Pertemuan: <span>35 - 60 Kali</span></li>
-                    <li>Jumlah Materi: <span>50 BAB</span></li>
-                    <li>Durasi: <span>3.75 - 5 Bulan</span></li>
-                </ul>
+            <div class="timeline-item">
+                <h4>2. Pelatihan Intensif & Asrama</h4>
+                <p>Pendidikan Bahasa Jepang, Bintalsik (FMD), Etika Kerja, dan Pembentukan Karakter.</p>
             </div>
-            <div class="curr-item">
-                <div class="curr-header">
-                    <h4>Kelas PROFESSIONAL</h4>
-                </div>
-                <ul class="curr-list">
-                    <li>Target Kelulusan: <span>Lulus N3</span></li>
-                    <li>Jumlah Pertemuan: <span>50+ Kali</span></li>
-                    <li>Jumlah Materi: <span>50 + Materi N3</span></li>
-                    <li>Durasi: <span>6 - 8 Bulan</span></li>
-                </ul>
+            <div class="timeline-item">
+                <h4>3. Ujian Sertifikasi Resmi</h4>
+                <p>Peserta mengikuti ujian JFT-Basic/JLPT dan Ujian Keahlian (SSW Skill Test).</p>
+            </div>
+            <div class="timeline-item">
+                <h4>4. Wawancara User (Matching SO)</h4>
+                <p>Proses wawancara langsung dengan perusahaan Jepang melalui jaringan SO mitra.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>5. Pemberkasan Visa & COE</h4>
+                <p>Pemprosesan dokumen Certificate of Eligibility (COE) dan Visa Kerja.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>6. Pemberangkatan</h4>
+                <p>Pembekalan akhir pra-keberangkatan dan penerbangan menuju Jepang.</p>
             </div>
         </div>
     </section>
 
-    <!-- FASILITAS / GALLERY SECTION -->
-    <section id="fasilitas">
+    <!-- SARANA PRASARANA -->
+    <section id="fasilitas" class="visi-misi-section">
         <div class="section-header reveal">
-            <h2>Fasilitas & Kehidupan Siswa</h2>
-            <p>Lingkungan belajar yang mendukung, asrama yang nyaman, dan kegiatan yang membangun kekompakan.</p>
+            <h2>Sarana Prasarana & Lingkungan Belajar</h2>
+            <p>Lingkungan yang kondusif untuk membangun fokus dan kedisiplinan.</p>
         </div>
         <div class="gallery-grid reveal">
-            <!-- Menggunakan gambar dari folder Anda -->
             <div class="gallery-item">
-                <img src="foto-asrama.jpeg" alt="Asrama" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Asrama Siswa</div>
+                <img src="Kegiatan-belajar-2.jpeg" alt="Ruang Belajar" onerror="this.src='https://via.placeholder.com/400x300/181818/d4af37?text=Ruang+Belajar'">
+                <div class="gallery-overlay">Ruang Belajar Interaktif</div>
             </div>
             <div class="gallery-item">
-                <img src="Kegiatan-belajar-2.jpeg" alt="Belajar" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Kegiatan Belajar</div>
+                <img src="foto-asrama.jpeg" alt="Asrama" onerror="this.src='https://via.placeholder.com/400x300/181818/d4af37?text=Asrama'">
+                <div class="gallery-overlay">Asrama (Japanese Zone)</div>
             </div>
             <div class="gallery-item">
-                <img src="Foto-latihan-fisik-2.jpeg" alt="Latihan Fisik" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Latihan Fisik</div>
+                <img src="Foto-latihan-fisik-2.jpeg" alt="Latihan Fisik" onerror="this.src='https://via.placeholder.com/400x300/181818/d4af37?text=Latihan+Fisik'">
+                <div class="gallery-overlay">Area Latihan Fisik & FMD</div>
             </div>
             <div class="gallery-item">
-                <img src="foto-dapur-asrama-2.jpeg" alt="Dapur Asrama" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Fasilitas Dapur</div>
-            </div>
-            <div class="gallery-item">
-                <img src="Kegiatan-belajar-4.jpeg" alt="Kelas" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Suasana Kelas</div>
-            </div>
-            <div class="gallery-item">
-                <img src="foto bersama siswa hitam 2.jpeg" alt="Kebersamaan" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Kebersamaan Siswa</div>
+                <img src="foto-dapur-asrama-2.jpeg" alt="Dapur" onerror="this.src='https://via.placeholder.com/400x300/181818/d4af37?text=Dapur+Asrama'">
+                <div class="gallery-overlay">Fasilitas Dapur Bersama</div>
             </div>
         </div>
     </section>
 
-    <!-- INVESTASI SECTION (Tanpa Angka) -->
-    <section id="investasi" class="investasi-section">
-        <div class="investasi-box reveal">
-            <h2>Investasi Transparan, Tanpa Biaya Tersembunyi</h2>
-            <p style="color: var(--text-muted); margin-bottom: 30px;">Kami percaya masa depan Anda adalah investasi yang berharga. Kami menawarkan skema pembiayaan yang terjangkau, fleksibel, dan dapat dicicil.</p>
-            
-            <div class="investasi-features">
-                <div class="inv-feat">
-                    <h4>✓ Bebas Biaya Pendaftaran</h4>
-                    <p>Langkah pertama Anda menuju Jepang tidak akan terhambat oleh biaya administrasi awal.</p>
-                </div>
-                <div class="inv-feat">
-                    <h4>✓ Fasilitas All-In</h4>
-                    <p>Satu investasi untuk belajar, asrama gratis, modul lengkap, dan pendampingan hingga terbang.</p>
-                </div>
-                <div class="inv-feat">
-                    <h4>✓ Bisa Dicicil</h4>
-                    <p>Kami menyediakan opsi pembayaran bertahap yang bisa disesuaikan dengan kondisi Anda.</p>
-                </div>
-            </div>
-
-            <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-primary" style="margin-top: 20px;">Dapatkan Rincian Biaya Sesuai Profil Anda</a>
-            <p style="font-size: 0.8rem; color: #555; margin-top: 15px;">*Admin kami akan memberikan rincian biaya yang transparan setelah Anda menyelesaikan kuis singkat.</p>
+    <!-- KEMITRAAN -->
+    <section class="partnership-section">
+        <div class="section-header reveal">
+            <h2>Kemitraan & Penyaluran Legal</h2>
+        </div>
+        <div class="partnership-content reveal">
+            <p>LPKS Arima Persada menjalin kerja sama strategis dengan <strong>Sending Organization (SO) resmi</strong> yang terdaftar di Kementerian Ketenagakerjaan RI (Kemnaker) serta Organisasi Penyelenggara Magang Jepang (OTIT).</p>
+            <p>Melalui kemitraan ini, kami menjamin penyaluran kerja yang aman, pengurusan dokumen (COE & Visa) yang legal, serta pendampingan berkelanjutan bagi peserta selama bekerja di Jepang.</p>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq">
+    <!-- FAQ -->
+    <section>
         <div class="section-header reveal">
             <h2>Pertanyaan yang Sering Diajukan</h2>
         </div>
         <div class="faq-container reveal">
             <div class="faq-item">
-                <div class="faq-question">Apakah LPKS Arima Persada memiliki izin resmi? <span>+</span></div>
-                <div class="faq-answer">Ya, kami terdaftar secara resmi dan memiliki Nomor Induk Berusaha (NIB). Kami juga bekerja sama dengan lembaga pengirim resmi (SO) yang diakui oleh pemerintah Jepang.</div>
+                <div class="faq-question">Apakah saya harus bisa bahasa Jepang dari nol? <span>+</span></div>
+                <div class="faq-answer">Tidak perlu khawatir. LPKS Arima menyediakan Kelas Basic yang dirancang khusus dari nol hingga mencapai target A1. Anda akan dibimbing oleh instruktur berpengalaman.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Apakah asrama benar-benar gratis? <span>+</span></div>
-                <div class="faq-answer">Betul. Selama masa pelatihan, siswa mendapatkan fasilitas asrama secara gratis, termasuk tempat tidur, dapur bersama, dan lingkungan yang mendukung proses belajar.</div>
+                <div class="faq-question">Apakah asrama wajib dihuni? <span>+</span></div>
+                <div class="faq-answer">Sangat disarankan. Asrama kami menerapkan sistem *Japanese Zone* yang membiasakan siswa berbahasa Jepang sehari-hari. Fasilitas ini gratis dan sangat mendukung proses pembentukan karakter serta kedisiplinan.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Bagaimana jika saya belum bisa bahasa Jepang sama sekali? <span>+</span></div>
-                <div class="faq-answer">Tidak masalah. Kami menyediakan Kelas Basic yang dirancang khusus dari nol hingga mencapai target kelulusan A1. Anda akan dibimbing oleh instruktur berpengalaman.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Berapa biaya untuk mengikuti pelatihan ini? <span>+</span></div>
-                <div class="faq-answer">Untuk menjaga transparansi dan memberikan penawaran yang adil, rincian biaya akan dijelaskan langsung oleh admin kami setelah Anda mengikuti kuis karier singkat. Biaya dapat dicicil dan sudah mencakup fasilitas all-in.</div>
+                <div class="faq-question">Berapa investasi biaya pendidikannya? <span>+</span></div>
+                <div class="faq-answer">Kami berkomitmen pada transparansi. Rincian biaya (yang sangat terjangkau dan dapat dicicil) akan dijelaskan secara personal oleh tim admin kami setelah Anda berkonsultasi. Kami juga membebaskan biaya pendaftaran awal.</div>
             </div>
         </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta reveal">
+        <h2>Konsultasikan Rencana Belajar Anda</h2>
+        <p>Setiap peserta memiliki kondisi dan tujuan yang berbeda. Tim informasi kami siap membantu merancang jalur belajar yang paling tepat untuk Anda.</p>
+        <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-primary">Mulai Konsultasi (Kuis 1 Menit)</a>
     </section>
 
     <!-- FOOTER -->
@@ -767,23 +1119,22 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <img src="logo.png" alt="Arima Logo" onerror="this.style.display='none'">
-                <p>LPKS Arima Persada adalah lembaga pelatihan kerja swasta yang berdedikasi untuk mempersiapkan tenaga kerja Indonesia yang kompeten dan siap bersaing di Jepang.</p>
+                <p>PT. Arima Bangkit Persada (LPKS Arima Persada). Lembaga pelatihan kerja swasta yang berdedikasi mencetak tenaga kerja Indonesia yang kompeten dan berdaya saing global.</p>
             </div>
             <div class="footer-links">
-                <h4>Navigasi</h4>
+                <h4>Kontak Kami</h4>
                 <ul>
-                    <li><a href="#program">Program</a></li>
-                    <li><a href="#kurikulum">Kurikulum</a></li>
-                    <li><a href="#fasilitas">Fasilitas</a></li>
-                    <li><a href="https://arima-lp.vercel.app/chatbox.html">Kuis Karier</a></li>
+                    <li>Jl. Sidoharjo 1 Desa Negara Ratu, Kec. Natar, Kab. Lampung Selatan, Kode Pos: 35362</li>
+                    <li>Telepon: +62 812-8267-4707</li>
+                    <li>Web: www.lpkarimapersada.com</li>
                 </ul>
             </div>
             <div class="footer-links">
-                <h4>Legalitas</h4>
+                <h4>Informasi</h4>
                 <ul>
                     <li><a href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
                     <li><a href="syarat-ketentuan.html">Syarat & Ketentuan</a></li>
-                    <li><a href="Company Profile LPKS Arima Persada.pdf" target="_blank">Unduh Company Profile</a></li>
+                    <li><a href="Company Profile LPKS Arima Persada.pdf" target="_blank">Unduh Company Profile (PDF)</a></li>
                 </ul>
             </div>
         </div>
@@ -801,8 +1152,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Opsional: Berhenti mengamati setelah muncul
-                    // revealObserver.unobserve(entry.target); 
                 }
             });
         }, {
@@ -817,7 +1166,7 @@
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
             question.addEventListener('click', () => {
-                // Tutup item lain (opsional, agar hanya satu yang terbuka)
+                // Tutup item lain
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
@@ -839,7 +1188,7 @@
                 nav.style.background = 'rgba(5, 5, 5, 0.95)';
                 nav.style.padding = '10px 5%';
             } else {
-                nav.style.background = 'rgba(10, 10, 10, 0.7)';
+                nav.style.background = 'rgba(10, 10, 10, 0.8)';
                 nav.style.padding = '15px 5%';
             }
         });
