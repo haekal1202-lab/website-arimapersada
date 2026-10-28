@@ -3,191 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program & Info - LPKS Arima Persada</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F7F6; }
-        ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
-    </style>
+    <meta name="description" content="Detail Program Pelatihan LPKS Arima Persada.">
+    <title>Program Pelatihan — LPKS Arima Persada</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="flex h-screen overflow-hidden text-slate-800">
+<body>
 
-    <!-- SIDEBAR (Sama) -->
-    <aside class="w-72 bg-white border-r border-slate-200 flex flex-col hidden lg:flex shrink-0 z-20">
-        <div class="h-20 flex items-center px-6 border-b border-slate-100 gap-3">
-            <div class="w-10 h-10 bg-[#0A3155] rounded-xl flex items-center justify-center overflow-hidden shadow-lg shrink-0 relative">
-                <img src="Logo polos.jpeg" alt="Logo" class="w-full h-full object-cover absolute inset-0 z-10" onerror="this.style.display='none';">
-                <span class="text-white font-extrabold text-lg font-serif relative z-0">A</span>
-            </div>
-            <div>
-                <p class="font-extrabold text-[#0A3155] text-base leading-tight">Arima Persada</p>
-                <p class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider mt-0.5">LPKS Resmi Kemnaker</p>
-            </div>
+    <!-- NAVBAR -->
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="Arima Logo" onerror="this.src='https://via.placeholder.com/50/d4af37/000000?text=A'">
+            <span class="nav-brand-text">LPKS Arima Persada</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html#tentang">Tentang</a>
+            <a href="index.html#edukasi">Edukasi</a>
+            <a href="program.html">Program</a>
+            <a href="index.html#alur">Alur</a>
+            <a href="index.html#fasilitas">Fasilitas</a>
         </div>
-        <nav class="flex-1 py-6 px-4 space-y-2 overflow-y-auto">
-            <a href="index.html" class="flex items-center px-4 py-3.5 text-slate-500 hover:bg-slate-50 hover:text-[#0A3155] rounded-xl font-semibold transition-all"><i class="fa-solid fa-chart-pie w-6"></i> Ringkasan</a>
-            <a href="tentang.html" class="flex items-center px-4 py-3.5 text-slate-500 hover:bg-slate-50 hover:text-[#0A3155] rounded-xl font-semibold transition-all"><i class="fa-solid fa-building w-6"></i> Profil Lembaga</a>
-            <a href="program.html" class="flex items-center px-4 py-3.5 bg-blue-50 text-[#0A3155] rounded-xl font-bold transition-all relative group">
-                <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-6 bg-[#D90429] rounded-r-md"></div>
-                <i class="fa-solid fa-briefcase w-6 text-[#D90429]"></i> Program & Info
-            </a>
-            <a href="https://wa.me/6282375128230" class="flex items-center px-4 py-3.5 text-slate-500 hover:bg-green-50 hover:text-green-600 rounded-xl font-semibold transition-all"><i class="fa-brands fa-whatsapp w-6"></i> Hubungi Admin</a>
-        </nav>
-    </aside>
+        <a href="https://arima-lp.vercel.app/chatbox.html" class="nav-cta">Konsultasi</a>
+    </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="flex-1 flex flex-col h-full overflow-hidden">
-        <header class="h-20 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center px-8 shrink-0 sticky top-0 z-10">
-            <h1 class="text-2xl font-extrabold text-slate-800">Program & Informasi Peluang Kerja</h1>
-        </header>
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Program Pelatihan</h1>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Pilih jalur yang paling sesuai dengan latar belakang Anda. Kami menyediakan kurikulum yang terukur dengan target kelulusan yang jelas.</p>
+    </header>
 
-        <div class="flex-1 overflow-y-auto p-8 space-y-8">
+    <!-- DETAIL PROGRAM -->
+    <section>
+        <div class="detail-program-grid">
             
-            <!-- PROGRAM CARDS -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Magang (Ikusei Shuro) -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 relative overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
-                    <div class="h-2 w-full bg-slate-300"></div>
-                    <div class="p-6 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-600 flex items-center justify-center text-xl"><i class="fa-solid fa-user-graduate"></i></div>
-                            <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Pemula</span>
-                        </div>
-                        <h2 class="text-xl font-extrabold text-slate-800 mb-1">Magang Jepang</h2>
-                        <p class="text-xs text-slate-500 font-semibold mb-4">(Ikusei Shuro)</p>
-                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Program kerja untuk lulusan SMA/SMK. Fokus pada pelatihan dasar dan pengalaman kerja nyata.</p>
-                        
-                        <div class="space-y-3 text-sm">
-                            <div class="flex justify-between border-b border-slate-50 pb-2"><span class="text-slate-500">Durasi</span><span class="font-bold">3 - 5 Tahun</span></div>
-                            <div class="flex justify-between border-b border-slate-50 pb-2"><span class="text-slate-500">Bahasa</span><span class="font-bold text-[#D90429]">Wajib JLPT N5 / JFT A1</span></div>
-                            <div class="flex justify-between border-b border-slate-50 pb-2"><span class="text-slate-500">Pindah Kerja</span><span class="font-bold text-red-500">Tidak bisa</span></div>
-                        </div>
-                    </div>
+            <!-- Kelas Basic -->
+            <div id="basic" class="detail-card reveal">
+                <h2>Kelas BASIC</h2>
+                <span class="subtitle">Magang / Pemula</span>
+                <div class="detail-info-grid">
+                    <div class="detail-info-item"><span>Target Kelulusan</span><strong>Lulus A1</strong></div>
+                    <div class="detail-info-item"><span>Jumlah Pertemuan</span><strong>30 Kali</strong></div>
+                    <div class="detail-info-item"><span>Materi Belajar</span><strong>25 BAB</strong></div>
+                    <div class="detail-info-item"><span>Durasi Belajar</span><strong>2.5 Bulan</strong></div>
                 </div>
-
-                <!-- Tokutei Ginou -->
-                <div class="bg-gradient-to-b from-[#0A3155] to-blue-900 rounded-3xl shadow-xl relative overflow-hidden flex flex-col transform lg:-translate-y-2">
-                    <div class="absolute top-0 right-0 bg-[#D90429] text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl tracking-wider shadow-md z-10">PALING POPULER</div>
-                    <div class="h-2 w-full bg-[#D90429]"></div>
-                    <div class="p-6 flex-1 text-white">
-                        <div class="w-12 h-12 rounded-2xl bg-white/10 text-[#D4B678] flex items-center justify-center text-xl mb-4 backdrop-blur-sm"><i class="fa-solid fa-award"></i></div>
-                        <h2 class="text-xl font-extrabold mb-1">Tokutei Ginou</h2>
-                        <p class="text-xs text-blue-200 font-semibold mb-4">(Specified Skilled Worker)</p>
-                        <p class="text-sm text-blue-100 mb-6 leading-relaxed">Pekerja terampil dengan gaji setara pekerja lokal Jepang dan kontrak jangka panjang.</p>
-                        
-                        <div class="space-y-3 text-sm">
-                            <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-blue-200">Gaji</span><span class="font-bold">¥180rb - ¥250rb</span></div>
-                            <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-blue-200">Bahasa</span><span class="font-bold text-[#D4B678]">JFT A2 / N4</span></div>
-                            <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-blue-200">Pindah Kerja</span><span class="font-bold text-green-400">Bisa</span></div>
-                        </div>
-                    </div>
+                <p class="detail-desc">Kelas ini dirancang khusus untuk Anda yang baru memulai dari nol. Fokus utama adalah pengenalan huruf Hiragana, Katakana, dasar percakapan sehari-hari, dan pembentukan kedisiplinan dasar.</p>
+                <div class="detail-tags">
+                    <span class="detail-tag">Offline Pagi/Malam</span>
+                    <span class="detail-tag">Online Malam</span>
                 </div>
-
-                <!-- Gijinkoku -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 relative overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
-                    <div class="h-2 w-full bg-blue-400"></div>
-                    <div class="p-6 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-500 flex items-center justify-center text-xl"><i class="fa-solid fa-user-tie"></i></div>
-                            <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Profesional</span>
-                        </div>
-                        <h2 class="text-xl font-extrabold text-slate-800 mb-1">Gijinkoku</h2>
-                        <p class="text-xs text-slate-500 font-semibold mb-4">(Engineer / Specialist)</p>
-                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Jalur profesional untuk lulusan D3/S1 di bidang teknik, IT, atau manajemen.</p>
-                        
-                        <div class="space-y-3 text-sm">
-                            <div class="flex justify-between border-b border-slate-50 pb-2"><span class="text-slate-500">Pendidikan</span><span class="font-bold">D3 / S1</span></div>
-                            <div class="flex justify-between border-b border-slate-50 pb-2"><span class="text-slate-500">Bahasa</span><span class="font-bold">N3 / N2</span></div>
-                            <div class="flex justify-between border-b border-slate-50 pb-2"><span class="text-slate-500">Sektor</span><span class="font-bold">Teknik, IT, Layanan</span></div>
-                        </div>
-                    </div>
-                </div>
+                <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-outline">Konsultasi Kelas Basic</a>
             </div>
 
-            <!-- INFO PENTING & BUDAYA KERJA -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                    <h3 class="text-lg font-extrabold text-slate-800 mb-5 flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center"><i class="fa-solid fa-shield-halved"></i></div> Hak & Aturan Pekerja</h3>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                        <li class="flex gap-3">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-0.5"></i>
-                            <div><strong class="text-slate-800 block mb-1">Asuransi Kesehatan</strong>Pekerja asing wajib terdaftar. Anda hanya membayar 30% dari biaya pengobatan.</div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-0.5"></i>
-                            <div><strong class="text-slate-800 block mb-1">Cuti Berbayar</strong>Setelah 6 bulan bekerja, Anda berhak atas cuti tahunan berbayar (minimal 10 hari).</div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-0.5"></i>
-                            <div><strong class="text-slate-800 block mb-1">Hak Pindah Kerja</strong>Mulai 2027, pekerja Ikusei Shuro dapat pindah perusahaan jika haknya dilanggar.</div>
-                        </li>
-                    </ul>
+            <!-- Kelas Reguler -->
+            <div id="reguler" class="detail-card reveal">
+                <h2>Kelas REGULER</h2>
+                <span class="subtitle">Magang / Tokutei Ginou</span>
+                <div class="detail-info-grid">
+                    <div class="detail-info-item"><span>Target Kelulusan</span><strong>A1 / A2.2 (JFT)</strong></div>
+                    <div class="detail-info-item"><span>Jumlah Pertemuan</span><strong>35 - 60 Kali</strong></div>
+                    <div class="detail-info-item"><span>Materi Belajar</span><strong>50 BAB</strong></div>
+                    <div class="detail-info-item"><span>Durasi Belajar</span><strong>3.75 - 5 Bulan</strong></div>
                 </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                    <h3 class="text-lg font-extrabold text-slate-800 mb-5 flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-red-50 text-[#D90429] flex items-center justify-center"><i class="fa-solid fa-users"></i></div> Budaya Kerja Jepang</h3>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                        <li class="flex gap-3">
-                            <i class="fa-solid fa-star text-[#D4B678] mt-0.5"></i>
-                            <div><strong class="text-slate-800 block mb-1">5S (Seiri, Seiton, dll)</strong>Prinsip kerapian dan kedisiplinan di tempat kerja yang sangat dijunjung tinggi.</div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fa-solid fa-star text-[#D4B678] mt-0.5"></i>
-                            <div><strong class="text-slate-800 block mb-1">Horenso</strong>Budaya melapor, menghubungi, dan berkonsultasi dengan atasan setiap ada perkembangan.</div>
-                        </li>
-                        <li class="flex gap-3">
-                            <i class="fa-solid fa-star text-[#D4B678] mt-0.5"></i>
-                            <div><strong class="text-slate-800 block mb-1">Ketepatan Waktu</strong>Datang 5-10 menit lebih awal adalah hal yang sangat dihargai.</div>
-                        </li>
-                    </ul>
+                <p class="detail-desc">Program paling populer untuk mempersiapkan diri bekerja di Jepang. Menitikberatkan pada penguasaan tata bahasa, percakapan intensif (Kaiwa), dan latihan soal ujian JFT-Basic.</p>
+                <div class="detail-tags">
+                    <span class="detail-tag">Offline Pagi/Malam</span>
+                    <span class="detail-tag">Online Malam</span>
                 </div>
+                <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-outline">Konsultasi Kelas Reguler</a>
             </div>
 
-            <!-- GALERI KEBERANGKATAN & ALUR -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <!-- Alur -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                    <h3 class="text-lg font-extrabold text-slate-800 mb-6">Alur Pelatihan Hingga Keberangkatan</h3>
-                    <div class="relative border-l-2 border-slate-100 ml-3 space-y-8 pb-4">
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">1</div>
-                            <h4 class="font-bold text-slate-800">Pendaftaran & MCU</h4>
-                            <p class="text-xs text-slate-500 mt-1">Tes seleksi masuk, Medical Check Up, dan orientasi awal.</p>
-                        </div>
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">2</div>
-                            <h4 class="font-bold text-slate-800">Pelatihan Intensif</h4>
-                            <p class="text-xs text-slate-500 mt-1">Bahasa Jepang, Bintalsik, Etika Kerja (5S) di asrama.</p>
-                        </div>
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-[#0A3155] text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">3</div>
-                            <h4 class="font-bold text-slate-800">Ujian Sertifikasi</h4>
-                            <p class="text-xs text-slate-500 mt-1">Ujian bahasa JFT-Basic/JLPT & Skill Test (SSW).</p>
-                        </div>
-                        <div class="relative pl-8">
-                            <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-[#D90429] text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">4</div>
-                            <h4 class="font-bold text-[#D90429]">Keberangkatan</h4>
-                            <p class="text-xs text-slate-500 mt-1">Pemprosesan Visa, COE, dan penerbangan ke Jepang.</p>
-                        </div>
-                    </div>
+            <!-- Kelas Corporate -->
+            <div id="corporate" class="detail-card reveal">
+                <h2>Kelas CORPORATE</h2>
+                <span class="subtitle">Tokutei Ginou (Karyawan)</span>
+                <div class="detail-info-grid">
+                    <div class="detail-info-item"><span>Target Kelulusan</span><strong>A2.2 (JFT)</strong></div>
+                    <div class="detail-info-item"><span>Jumlah Pertemuan</span><strong>30 Kali</strong></div>
+                    <div class="detail-info-item"><span>Materi Belajar</span><strong>50 BAB</strong></div>
+                    <div class="detail-info-item"><span>Durasi Belajar</span><strong>3.75 Bulan</strong></div>
                 </div>
+                <p class="detail-desc">Dirancang khusus untuk Anda yang sudah bekerja dan memiliki waktu terbatas di hari kerja. Kelas dilaksanakan pada akhir pekan tanpa mengurangi intensitas materi persiapan SSW.</p>
+                <div class="detail-tags">
+                    <span class="detail-tag">Offline (Weekend)</span>
+                    <span class="detail-tag">Sabtu & Minggu</span>
+                </div>
+                <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-outline">Konsultasi Kelas Corporate</a>
+            </div>
 
-                <!-- Galeri -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                    <h3 class="text-lg font-extrabold text-slate-800 mb-6">Momen Keberangkatan</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="keberangkatan-siswa.jpeg" alt="Keberangkatan 1" class="w-full h-48 object-cover rounded-2xl shadow-sm hover:scale-105 transition duration-300">
-                        <img src="Foto-keberangkatan-siswa-2.jpeg" alt="Keberangkatan 2" class="w-full h-48 object-cover rounded-2xl shadow-sm hover:scale-105 transition duration-300">
-                        <div class="col-span-2 bg-blue-50 text-[#0A3155] p-4 rounded-2xl text-center border border-blue-100">
-                            <p class="text-sm font-bold">Telah memberangkatkan ratusan alumni ke berbagai prefektur di Jepang.</p>
-                        </div>
-                    </div>
+            <!-- Kelas Professional -->
+            <div id="professional" class="detail-card reveal">
+                <h2>Kelas PROFESSIONAL</h2>
+                <span class="subtitle">Engineer (D3/S1)</span>
+                <div class="detail-info-grid">
+                    <div class="detail-info-item"><span>Target Kelulusan</span><strong>Lulus N3</strong></div>
+                    <div class="detail-info-item"><span>Jumlah Pertemuan</span><strong>50+ Kali</strong></div>
+                    <div class="detail-info-item"><span>Materi Belajar</span><strong>50 + Materi N3</strong></div>
+                    <div class="detail-info-item"><span>Durasi Belajar</span><strong>6 - 8 Bulan</strong></div>
                 </div>
+                <p class="detail-desc">Jalur eksklusif bagi lulusan D3/S1 yang ingin bekerja sebagai tenaga profesional (Engineer) di Jepang. Materi mencakup penguasaan bahasa level lanjutan (N3) dan istilah teknis sesuai bidang.</p>
+                <div class="detail-tags">
+                    <span class="detail-tag">Offline + Online</span>
+                    <span class="detail-tag">Senin - Jumat</span>
+                </div>
+                <a href="https://arima-lp.vercel.app/chatbox.html" class="btn-outline">Konsultasi Kelas Professional</a>
             </div>
 
         </div>
-    </main>
+    </section>
+
+    <!-- FOOTER PREMIUM -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Arima Logo" onerror="this.style.display='none'">
+                <p>PT. Arima Bangkit Persada. Lembaga pelatihan kerja swasta yang berdedikasi mencetak tenaga kerja Indonesia yang kompeten dan berdaya saing global.</p>
+                <div class="social-icons">
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="TikTok">TK</a>
+                    <a href="#" title="Facebook">FB</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#tentang">Tentang Kami</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="index.html#fasilitas">Fasilitas</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Kontak Kami</h4>
+                <ul>
+                    <li>Jl. Sidoharjo 1 Desa Negara Ratu, Kec. Natar, Lampung Selatan, 35362</li>
+                    <li>Telp: +62 812-8267-4707</li>
+                    <li>Web: www.lpkarimapersada.com</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Informasi</h4>
+                <ul>
+                    <li><a href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
+                    <li><a href="syarat-ketentuan.html">Syarat & Ketentuan</a></li>
+                    <li><a href="Company Profile LPKS Arima Persada.pdf" target="_blank">Unduh Company Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LPKS Arima Persada. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
